@@ -53,7 +53,7 @@
             this.add_cart1 = new System.Windows.Forms.Button();
             this.add_cart2 = new System.Windows.Forms.Button();
             this.add_cart3 = new System.Windows.Forms.Button();
-            this.submit = new System.Windows.Forms.Button();
+            this.submit_cart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -160,6 +160,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(458, 293);
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // color_choice1
             // 
@@ -283,22 +284,23 @@
             this.add_cart3.UseVisualStyleBackColor = true;
             this.add_cart3.Click += new System.EventHandler(this.add_cart3_Click);
             // 
-            // submit
+            // submit_cart
             // 
-            this.submit.Location = new System.Drawing.Point(1581, 652);
-            this.submit.Name = "submit";
-            this.submit.Size = new System.Drawing.Size(114, 66);
-            this.submit.TabIndex = 30;
-            this.submit.Text = "Submit";
-            this.submit.UseVisualStyleBackColor = true;
-            this.submit.Click += new System.EventHandler(this.button1_Click);
+            this.submit_cart.Location = new System.Drawing.Point(1584, 646);
+            this.submit_cart.Name = "submit_cart";
+            this.submit_cart.Size = new System.Drawing.Size(121, 77);
+            this.submit_cart.TabIndex = 30;
+            this.submit_cart.Text = "Go to your cart";
+            this.submit_cart.UseVisualStyleBackColor = true;
+            this.submit_cart.Click += new System.EventHandler(this.button1_Click);
             // 
             // Catalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1728, 787);
-            this.Controls.Add(this.submit);
+            this.Controls.Add(this.submit_cart);
             this.Controls.Add(this.add_cart3);
             this.Controls.Add(this.add_cart2);
             this.Controls.Add(this.add_cart1);
@@ -362,7 +364,7 @@
         private System.Windows.Forms.Button add_cart1;
         private System.Windows.Forms.Button add_cart2;
         private System.Windows.Forms.Button add_cart3;
-        private System.Windows.Forms.Button submit;
+        private System.Windows.Forms.Button submit_cart;
     }
 }
 

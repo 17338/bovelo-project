@@ -9,20 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//test
-
 
 namespace bov
 {
 
     public partial class Catalog : Form
-    {
-        
+    {      
         OrderLine orderLine;
         CatalogShop catalogShop;
-        Bike_model bike1;
-        Bike_model bike2;
-        Bike_model bike3;
+        BikeModel bike1;
+        BikeModel bike2;
+        BikeModel bike3;
         Order order = new Order();
 
         public Catalog()
@@ -30,30 +27,25 @@ namespace bov
 
             InitializeComponent();
 
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
-
             List<string[]> list_bike = new List<string[]>();
             string[] list = null;
             foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\bike_model.txt"))
                 {
                   list = line.Split(';');
-                  list_bike.Add(list);
-                   
+                  list_bike.Add(list);                 
                 }
-
-           
+         
             catalogShop = new CatalogShop();
-            catalogShop.getAllbikemodel();
+            catalogShop.GetAllBikeModel();
 
-            bike1 = catalogShop.list_bike_model[0];
-            bike2 = catalogShop.list_bike_model[1];
-            bike3 = catalogShop.list_bike_model[2];
-
+            bike1 = catalogShop.bikesModel[0];
+            bike2 = catalogShop.bikesModel[1];
+            bike3 = catalogShop.bikesModel[2];
 
             name1.Text = bike1.name;
             name2.Text = bike2.name;
@@ -91,10 +83,102 @@ namespace bov
             }
         }
 
-        private void getAllbikemodel()
+        private void add_cart1_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (color_choice1.SelectedItem == null || size_choice1.SelectedItem == null || quantity_choice1.SelectedItem == null)
+            {
+                MessageBox.Show("Selected a color or quantity or size please");
+            }
+            else
+            {            
+                int quantity = int.Parse(quantity_choice1.SelectedItem.ToString());
+                int size = int.Parse(size_choice1.SelectedItem.ToString());
+                string color = color_choice1.SelectedItem.ToString();
+                OrderLine orderLine = new OrderLine(bike1, quantity, size, color);
+                if (order.orderLines.Count == 0)
+                {
+                    order.AddOrderLine(orderLine);
+                }
+                else
+                {
+                    order.CheckOrderLineExist(orderLine);
+                }
+                
+                MessageBox.Show("Order added in the cart");
+            }
         }
+
+        private void add_cart2_Click(object sender, EventArgs e)
+        {
+            if (color_choice2.SelectedItem == null || size_choice2.SelectedItem == null || quantity_choice2.SelectedItem == null)
+            {
+                MessageBox.Show("Selected a color or quantity or size please");
+            }
+            else
+            {
+                int quantity = int.Parse(quantity_choice2.SelectedItem.ToString());
+                int size = int.Parse(size_choice2.SelectedItem.ToString());
+                string color = color_choice2.SelectedItem.ToString();
+                OrderLine orderLine = new OrderLine(bike2, quantity, size, color);
+                if (order.orderLines.Count == 0)
+                {
+                    order.AddOrderLine(orderLine);
+                }
+                else
+                {
+                    order.CheckOrderLineExist(orderLine);
+                }
+                
+                MessageBox.Show("Order added in the cart");
+                
+            }
+        }
+
+        private void add_cart3_Click(object sender, EventArgs e)
+        {
+            if (color_choice3.SelectedItem == null || size_choice3.SelectedItem == null || quantity_choice3.SelectedItem == null)
+            {
+                MessageBox.Show("Selected a color or quantity or size please");
+            }
+            else
+            {
+
+                int quantity = int.Parse(quantity_choice3.SelectedItem.ToString());
+                int size = int.Parse(size_choice3.SelectedItem.ToString());
+                string color = color_choice3.SelectedItem.ToString();
+                orderLine = new OrderLine(bike3, quantity, size, color);
+                if (order.orderLines.Count == 0)
+                {
+                    order.AddOrderLine(orderLine);
+                }
+                else
+                {
+                    order.CheckOrderLineExist(orderLine);
+                }
+                MessageBox.Show("Order added in the cart");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            if (order.orderLines.Count != 0)
+            {
+              
+                order.TotalOrder();
+                this.Hide();
+                Cart frm2 = new Cart(order,this);
+                frm2.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("Your cart is empty");
+            }
+            
+        }
+
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -113,7 +197,7 @@ namespace bov
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-                
+
         }
 
         private void color1_Click(object sender, EventArgs e)
@@ -136,108 +220,8 @@ namespace bov
 
         }
 
-        private void add_cart1_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
-
-
-            if (color_choice1.SelectedItem == null || size_choice1.SelectedItem == null || quantity_choice1.SelectedItem == null)
-            {
-                MessageBox.Show("Selected a color or quantity or size please");
-            }
-            else
-            {
-               
-                int quantity = int.Parse(quantity_choice1.SelectedItem.ToString());
-                int size = int.Parse(size_choice1.SelectedItem.ToString());
-                string color = color_choice1.SelectedItem.ToString();
-                OrderLine orderLine = new OrderLine(bike1, quantity, size, color);
-                orderLine.AllBikes();
-                if (order.list_orderLines.Count == 0)
-                {
-                    order.addOrderLine(orderLine);
-                }
-                else
-                {
-                    order.checkiftheorderLineexist(orderLine);
-                }
-                
-                MessageBox.Show("Order added in the cart");
-            }
-
-
-            
-
-
-        }
-
-        private void add_cart2_Click(object sender, EventArgs e)
-        {
-            if (color_choice2.SelectedItem == null || size_choice2.SelectedItem == null || quantity_choice2.SelectedItem == null)
-            {
-                MessageBox.Show("Selected a color or quantity or size please");
-            }
-            else
-            {
-
-                int quantity = int.Parse(quantity_choice2.SelectedItem.ToString());
-                int size = int.Parse(size_choice2.SelectedItem.ToString());
-                string color = color_choice2.SelectedItem.ToString();
-                OrderLine orderLine = new OrderLine(bike2, quantity, size, color);
-                orderLine.AllBikes();
-                if (order.list_orderLines.Count == 0)
-                {
-                    order.addOrderLine(orderLine);
-                }
-                else
-                {
-                    order.checkiftheorderLineexist(orderLine);
-                }
-                
-                MessageBox.Show("Order added in the cart");
-                
-            }
-        }
-
-        private void add_cart3_Click(object sender, EventArgs e)
-        {
-            if (color_choice3.SelectedItem == null || size_choice3.SelectedItem == null || quantity_choice3.SelectedItem == null)
-            {
-                MessageBox.Show("Selected a color or quantity or size please");
-            }
-            else
-            {
-
-                int quantity = int.Parse(quantity_choice3.SelectedItem.ToString());
-                int size = int.Parse(size_choice3.SelectedItem.ToString());
-                string color = color_choice3.SelectedItem.ToString();
-                orderLine = new OrderLine(bike3, quantity, size, color);
-                orderLine.AllBikes();
-                if (order.list_orderLines.Count == 0)
-                {
-                    order.addOrderLine(orderLine);
-                }
-                else
-                {
-                    order.checkiftheorderLineexist(orderLine);
-                }
-                MessageBox.Show("Order added in the cart");
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            if (order.list_orderLines.Count != 0)
-            {
-              
-                order.TotalOrder();
-                
-                MessageBox.Show(order.estimate_date.ToString());
-            }
-            this.Hide();
-            Cart frm2 = new Cart(order);
-            frm2.ShowDialog();
-
 
         }
     }

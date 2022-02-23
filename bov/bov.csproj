@@ -53,7 +53,7 @@
       <DependentUpon>Cart.cs</DependentUpon>
     </Compile>
     <Compile Include="classes\Bike.cs" />
-    <Compile Include="classes\Bike_model.cs" />
+    <Compile Include="classes\BikeModel.cs" />
     <Compile Include="classes\CatalogShop.cs" />
     <Compile Include="Catalog.cs">
       <SubType>Form</SubType>

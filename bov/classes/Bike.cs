@@ -8,12 +8,12 @@ namespace bov.classes
 {
     public class Bike
     {
-        public Bike_model bike_model;
-        public bool bike_status;
-        public Bike(Bike_model bike_model)
+        public BikeModel bikeModel;
+        public bool bikeStatus;
+        public Bike(BikeModel bikeModel)
         {
-            this.bike_model = bike_model;
-            bike_status = false;
+            this.bikeModel = bikeModel;
+            bikeStatus = false;
         }
 
        

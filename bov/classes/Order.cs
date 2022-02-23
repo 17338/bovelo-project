@@ -9,54 +9,59 @@ namespace bov.classes
 {
     public class Order
     {
-        public List<OrderLine> list_orderLines;
+        public List<OrderLine> orderLines;
         public DateTime date;
-        public DateTime? estimate_date;
-        public float total_price;
+        public DateTime? estimateDate;
+        public float totalPrice;
         public bool status;
-        public float total_building_time;
+        public float totalBuildingTime;
         TimeSpan time;
         bool verif = true;
 
         public Order()
         {
-            this.list_orderLines = new List<OrderLine>();
+            this.orderLines = new List<OrderLine>();
             this.date = DateTime.Today;
-            this.estimate_date = DateTime.Today;
-            this.total_price = 0;
+            this.estimateDate = DateTime.Today;
+            this.totalPrice = 0;
             this.status = false;
         }
 
         public void TotalOrder()
         {
             
-            foreach (OrderLine line in this.list_orderLines)
+            foreach (OrderLine line in this.orderLines)
             {
-                this.total_price += line.bike_Model.price * line.quantity;
-                this.total_building_time += line.bike_Model.building_time * line.quantity;
+                this.totalPrice += line.bikeModel.price * line.quantity;
+                this.totalBuildingTime += line.bikeModel.buildingTime * line.quantity;
 
 
             }
-            this.time = TimeSpan.FromMinutes(total_building_time);
+            this.time = TimeSpan.FromMinutes(totalBuildingTime);
             Console.WriteLine(this.time.ToString());
-            this.estimate_date += time;
+            this.estimateDate += time;
 
 
         }
 
-        public void addOrderLine(OrderLine line)
+        public void AddOrderLine(OrderLine line)
         {
-            this.list_orderLines.Add(line);
+            this.orderLines.Add(line);
         }
 
-        public void checkiftheorderLineexist(OrderLine line)
+        public void DeleteOrderLine(int index)
         {
-            foreach (OrderLine verify_line in this.list_orderLines)
+            this.orderLines.RemoveAt(index);
+        }
+
+        public void CheckOrderLineExist(OrderLine line)
+        {
+            foreach (OrderLine verifyLine in this.orderLines)
             {
                 
-                if(line.color == verify_line.color && line.size == verify_line.size && line.bike_Model == verify_line.bike_Model)
+              if(line.color == verifyLine.color && line.size == verifyLine.size && line.bikeModel.name == verifyLine.bikeModel.name)
                 {
-                    verify_line.quantity += line.quantity;                
+                    verifyLine.quantity += line.quantity;                
                     verif = false;
                 }
 
@@ -64,8 +69,9 @@ namespace bov.classes
             }
             if(verif == true)
             {
-                this.list_orderLines.Add(line);
+                this.orderLines.Add(line);
             }
+            verif = true;
 
 
         }
