@@ -49,7 +49,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(43, 15);
+            this.button2.Location = new System.Drawing.Point(43, 607);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(191, 58);
             this.button2.TabIndex = 1;
@@ -124,6 +124,7 @@
             this.label_lastname.Size = new System.Drawing.Size(94, 20);
             this.label_lastname.TabIndex = 7;
             this.label_lastname.Text = "Last Name :";
+            this.label_lastname.Click += new System.EventHandler(this.label_lastname_Click);
             // 
             // label_firstname
             // 
@@ -143,6 +144,7 @@
             this.label_adress.Size = new System.Drawing.Size(67, 20);
             this.label_adress.TabIndex = 9;
             this.label_adress.Text = "Adress :";
+            this.label_adress.Click += new System.EventHandler(this.label_adress_Click);
             // 
             // label_TVA
             // 
@@ -152,6 +154,7 @@
             this.label_TVA.Size = new System.Drawing.Size(48, 20);
             this.label_TVA.TabIndex = 10;
             this.label_TVA.Text = "TVA :";
+            this.label_TVA.Click += new System.EventHandler(this.label_TVA_Click);
             // 
             // textBox_firstname
             // 
@@ -159,6 +162,7 @@
             this.textBox_firstname.Name = "textBox_firstname";
             this.textBox_firstname.Size = new System.Drawing.Size(100, 26);
             this.textBox_firstname.TabIndex = 11;
+            this.textBox_firstname.TextChanged += new System.EventHandler(this.textBox_firstname_TextChanged);
             // 
             // textBox_adress
             // 
@@ -166,6 +170,7 @@
             this.textBox_adress.Name = "textBox_adress";
             this.textBox_adress.Size = new System.Drawing.Size(100, 26);
             this.textBox_adress.TabIndex = 12;
+            this.textBox_adress.TextChanged += new System.EventHandler(this.textBox_adress_TextChanged);
             // 
             // textBox_TVA
             // 
@@ -173,6 +178,7 @@
             this.textBox_TVA.Name = "textBox_TVA";
             this.textBox_TVA.Size = new System.Drawing.Size(100, 26);
             this.textBox_TVA.TabIndex = 13;
+            this.textBox_TVA.TextChanged += new System.EventHandler(this.textBox_TVA_TextChanged);
             // 
             // Cart
             // 

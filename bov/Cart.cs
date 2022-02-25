@@ -106,5 +106,35 @@ namespace bov
         {
 
         }
+
+        private void label_adress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_TVA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_lastname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_firstname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_adress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_TVA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
