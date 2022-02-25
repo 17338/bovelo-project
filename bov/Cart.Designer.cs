@@ -34,6 +34,11 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteThisOrderLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.deliveryDate = new System.Windows.Forms.TextBox();
+            this.totalCost = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -89,12 +94,59 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Right click on the order line that you want to delete ";
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(39, 519);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(185, 30);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "estimative delivery date :";
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(133, 561);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 29);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "total price :";
+            // 
+            // deliveryDate
+            // 
+            this.deliveryDate.Location = new System.Drawing.Point(230, 516);
+            this.deliveryDate.Name = "deliveryDate";
+            this.deliveryDate.ReadOnly = true;
+            this.deliveryDate.Size = new System.Drawing.Size(180, 26);
+            this.deliveryDate.TabIndex = 7;
+            // 
+            // totalCost
+            // 
+            this.totalCost.Location = new System.Drawing.Point(230, 558);
+            this.totalCost.Name = "totalCost";
+            this.totalCost.ReadOnly = true;
+            this.totalCost.Size = new System.Drawing.Size(180, 26);
+            this.totalCost.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1456, 653);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 79);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Confirm the order";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1728, 787);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.totalCost);
+            this.Controls.Add(this.deliveryDate);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
@@ -116,5 +168,10 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deleteThisOrderLineToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox deliveryDate;
+        private System.Windows.Forms.TextBox totalCost;
+        private System.Windows.Forms.Button button1;
     }
 }

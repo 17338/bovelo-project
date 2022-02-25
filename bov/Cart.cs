@@ -15,11 +15,11 @@ namespace bov
     {
         Catalog catalog;
         Order order;
-        private int rowIndex=0;
-        public Cart(Order order,Catalog catalog)
-        {          
+        private int rowIndex = 0;
+        public Cart(Order order, Catalog catalog)
+        {
             InitializeComponent();
-            
+
             this.catalog = catalog;
             this.order = order;
         }
@@ -39,14 +39,21 @@ namespace bov
                 dataGridView1.Rows.Add(row);
             }
 
+            order.totalPrice = 0;
+            order.estimateDate = DateTime.Today;
+            order.totalBuildingTime = 0;
+            order.TotalOrder();
+            deliveryDate.Text = order.estimateDate.ToString();
+            totalCost.Text = order.totalPrice.ToString() + "€";
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            catalog.Show(); 
+            catalog.Show();
         }
-       
+
         private void contextMenuStrip1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.RemoveAt(this.rowIndex);
@@ -56,6 +63,23 @@ namespace bov
             {
                 string[] row = new string[] { orderline.bikeModel.name.ToString(), orderline.size.ToString(), orderline.color.ToString(), orderline.quantity.ToString() };
                 dataGridView1.Rows.Add(row);
+            }
+
+            if (dataGridView1.Rows.Count > 1)
+            {
+                order.totalPrice = 0;
+                order.estimateDate = DateTime.Today;
+                order.totalBuildingTime = 0;
+                order.TotalOrder();
+                deliveryDate.Text = order.estimateDate.ToString();
+                totalCost.Text = order.totalPrice.ToString() + "€";
+            }
+            else
+            {
+                order.totalPrice = 0;
+                totalCost.Text = order.totalPrice.ToString() + "€";
+                order.estimateDate = null;
+                deliveryDate.Text = "/";
             }
         }
 
@@ -89,6 +113,20 @@ namespace bov
         private void dataGridView1_MouseUp(object sender, MouseEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count <= 1)
+            {
+                MessageBox.Show("Your cart is currently empty");
+            }
+            else
+            {
+                this.Hide();
+                PurchaseConfirmation frm3 = new PurchaseConfirmation(catalog);
+                frm3.Show();
+            }
         }
     }
 }
