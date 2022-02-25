@@ -34,6 +34,15 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteThisOrderLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.Lastname = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label_lastname = new System.Windows.Forms.Label();
+            this.label_firstname = new System.Windows.Forms.Label();
+            this.label_adress = new System.Windows.Forms.Label();
+            this.label_TVA = new System.Windows.Forms.Label();
+            this.textBox_firstname = new System.Windows.Forms.TextBox();
+            this.textBox_adress = new System.Windows.Forms.TextBox();
+            this.textBox_TVA = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -89,12 +98,97 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Right click on the order line that you want to delete ";
             // 
+            // Lastname
+            // 
+            this.Lastname.Location = new System.Drawing.Point(1004, 188);
+            this.Lastname.Name = "Lastname";
+            this.Lastname.Size = new System.Drawing.Size(100, 26);
+            this.Lastname.TabIndex = 5;
+            this.Lastname.TextChanged += new System.EventHandler(this.Lastname_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1168, 606);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(225, 59);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Confirm order";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label_lastname
+            // 
+            this.label_lastname.AutoSize = true;
+            this.label_lastname.Location = new System.Drawing.Point(904, 188);
+            this.label_lastname.Name = "label_lastname";
+            this.label_lastname.Size = new System.Drawing.Size(94, 20);
+            this.label_lastname.TabIndex = 7;
+            this.label_lastname.Text = "Last Name :";
+            // 
+            // label_firstname
+            // 
+            this.label_firstname.AutoSize = true;
+            this.label_firstname.Location = new System.Drawing.Point(904, 235);
+            this.label_firstname.Name = "label_firstname";
+            this.label_firstname.Size = new System.Drawing.Size(88, 20);
+            this.label_firstname.TabIndex = 8;
+            this.label_firstname.Text = "Firstname :";
+            this.label_firstname.Click += new System.EventHandler(this.label_firstname_Click);
+            // 
+            // label_adress
+            // 
+            this.label_adress.AutoSize = true;
+            this.label_adress.Location = new System.Drawing.Point(904, 281);
+            this.label_adress.Name = "label_adress";
+            this.label_adress.Size = new System.Drawing.Size(67, 20);
+            this.label_adress.TabIndex = 9;
+            this.label_adress.Text = "Adress :";
+            // 
+            // label_TVA
+            // 
+            this.label_TVA.AutoSize = true;
+            this.label_TVA.Location = new System.Drawing.Point(904, 324);
+            this.label_TVA.Name = "label_TVA";
+            this.label_TVA.Size = new System.Drawing.Size(48, 20);
+            this.label_TVA.TabIndex = 10;
+            this.label_TVA.Text = "TVA :";
+            // 
+            // textBox_firstname
+            // 
+            this.textBox_firstname.Location = new System.Drawing.Point(1004, 235);
+            this.textBox_firstname.Name = "textBox_firstname";
+            this.textBox_firstname.Size = new System.Drawing.Size(100, 26);
+            this.textBox_firstname.TabIndex = 11;
+            // 
+            // textBox_adress
+            // 
+            this.textBox_adress.Location = new System.Drawing.Point(1004, 281);
+            this.textBox_adress.Name = "textBox_adress";
+            this.textBox_adress.Size = new System.Drawing.Size(100, 26);
+            this.textBox_adress.TabIndex = 12;
+            // 
+            // textBox_TVA
+            // 
+            this.textBox_TVA.Location = new System.Drawing.Point(1004, 324);
+            this.textBox_TVA.Name = "textBox_TVA";
+            this.textBox_TVA.Size = new System.Drawing.Size(100, 26);
+            this.textBox_TVA.TabIndex = 13;
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1728, 787);
+            this.Controls.Add(this.textBox_TVA);
+            this.Controls.Add(this.textBox_adress);
+            this.Controls.Add(this.textBox_firstname);
+            this.Controls.Add(this.label_TVA);
+            this.Controls.Add(this.label_adress);
+            this.Controls.Add(this.label_firstname);
+            this.Controls.Add(this.label_lastname);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Lastname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
@@ -116,5 +210,14 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deleteThisOrderLineToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Lastname;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label_lastname;
+        private System.Windows.Forms.Label label_firstname;
+        private System.Windows.Forms.Label label_adress;
+        private System.Windows.Forms.Label label_TVA;
+        private System.Windows.Forms.TextBox textBox_firstname;
+        private System.Windows.Forms.TextBox textBox_adress;
+        private System.Windows.Forms.TextBox textBox_TVA;
     }
 }

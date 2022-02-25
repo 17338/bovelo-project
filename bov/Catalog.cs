@@ -224,5 +224,10 @@ namespace bov
         {
 
         }
+
+        private void name2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
