@@ -61,6 +61,7 @@
     <Compile Include="Catalog.Designer.cs">
       <DependentUpon>Catalog.cs</DependentUpon>
     </Compile>
+    <Compile Include="classes\Customer.cs" />
     <Compile Include="classes\Order.cs" />
     <Compile Include="classes\OrderLine.cs" />
     <Compile Include="Program.cs" />
