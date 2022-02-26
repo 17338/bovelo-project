@@ -90,5 +90,51 @@ namespace bov
         {
 
         }
+
+        private void Lastname_TextChanged(object sender, EventArgs e)
+        {
+            //string a = Lastname.Text;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Command performed");
+            Application.Exit();
+        }
+
+        private void label_firstname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_adress_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_TVA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_lastname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_firstname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_adress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_TVA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
