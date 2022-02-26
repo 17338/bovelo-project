@@ -28,8 +28,9 @@ namespace bov
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            catalog.Show();
+            this.Close();
+            Catalog new_catalog = new Catalog();
+            new_catalog.Show();
         }
     }
 }

@@ -35,7 +35,7 @@ namespace bov
             List<string[]> list_bike = new List<string[]>();
             string[] list = null;
             //foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\bike_model.txt"))
-            foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\bike_model.txt"))
+            //foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\bike_model.txt"))
                 {
                   list = line.Split(';');
                   list_bike.Add(list);                 
@@ -60,12 +60,12 @@ namespace bov
             //pictureBox2.Image = Image.FromFile(@"C:\Users\zakbu\source\repos\bov\bov\explorer.jfif");
             //pictureBox3.Image = Image.FromFile(@"C:\Users\zakbu\source\repos\bov\bov\explorer.jfif");
 
-            pictureBox1.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
-            pictureBox2.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
-            pictureBox3.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
+            //pictureBox1.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
+            //pictureBox2.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
+            //pictureBox3.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
 
             //foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\colors.txt"))
-            foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\colors.txt"))
+            //foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\colors.txt"))
                 {
                 color_choice1.Items.Add(line);
                 color_choice2.Items.Add(line);
@@ -73,7 +73,7 @@ namespace bov
             }
 
             //foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\sizes.txt"))
-            foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\sizes.txt"))
+            //foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\sizes.txt"))
                 {
 
                 size_choice1.Items.Add(line);

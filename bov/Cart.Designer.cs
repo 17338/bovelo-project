@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.deliveryDate = new System.Windows.Forms.TextBox();
             this.totalCost = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.submitPurchase = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -126,15 +126,15 @@
             this.totalCost.Size = new System.Drawing.Size(180, 26);
             this.totalCost.TabIndex = 8;
             // 
-            // button1
+            // submitPurchase
             // 
-            this.button1.Location = new System.Drawing.Point(1456, 653);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 79);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Confirm the order";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.submitPurchase.Location = new System.Drawing.Point(1456, 653);
+            this.submitPurchase.Name = "submitPurchase";
+            this.submitPurchase.Size = new System.Drawing.Size(172, 79);
+            this.submitPurchase.TabIndex = 9;
+            this.submitPurchase.Text = "Confirm the order";
+            this.submitPurchase.UseVisualStyleBackColor = true;
+            this.submitPurchase.Click += new System.EventHandler(this.submitPurchase_Click);
             // 
             // Cart
             // 
@@ -142,7 +142,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1728, 787);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.submitPurchase);
             this.Controls.Add(this.totalCost);
             this.Controls.Add(this.deliveryDate);
             this.Controls.Add(this.label3);
@@ -172,6 +172,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox deliveryDate;
         private System.Windows.Forms.TextBox totalCost;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button submitPurchase;
     }
 }

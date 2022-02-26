@@ -20,7 +20,7 @@ namespace bov.classes
         {
             string[] list = null;
             //foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\bike_model.txt"))
-            foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\bike_model.txt"))
+            //foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\bike_model.txt"))
             {
                 list = line.Split(';');
                 BikeModel bike_model = new BikeModel(list[0], list[1], float.Parse(list[2]), float.Parse(list[3]));

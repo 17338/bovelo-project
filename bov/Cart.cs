@@ -115,7 +115,7 @@ namespace bov
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void submitPurchase_Click(object sender, EventArgs e)
         {
             if (dataGridView1.Rows.Count <= 1)
             {
