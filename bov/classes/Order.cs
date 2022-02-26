@@ -9,6 +9,7 @@ namespace bov.classes
 {
     public class Order
     {
+        public Customer customer;
         public List<OrderLine> orderLines;
         public DateTime date;
         public DateTime? estimateDate;
@@ -20,6 +21,7 @@ namespace bov.classes
 
         public Order()
         {
+            this.customer = null;
             this.orderLines = new List<OrderLine>();
             this.date = DateTime.Today;
             this.estimateDate = DateTime.Today;
@@ -27,6 +29,11 @@ namespace bov.classes
             this.status = false;
         }
 
+
+        public void CustomerLinked(Customer customer)
+        {
+            this.customer = customer;
+        }
         public void TotalOrder()
         {
             

@@ -8,13 +8,15 @@ namespace bov.classes
 {
     public class Customer
     {
-        public string name;
+        public string lastName;
+        public string firstName;
         public string adress;
         public string tva;
 
-        public Customer(string name,string adress,string tva)
+        public Customer(string firstName, string lastName,string adress,string tva)
         {
-            this.name = name;
+            this.firstName = firstName;
+            this.lastName = lastName;
             this.adress = adress;
             this.tva = tva;
         }

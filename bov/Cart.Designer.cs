@@ -34,15 +34,12 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteThisOrderLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.deliveryDate = new System.Windows.Forms.TextBox();
             this.totalCost = new System.Windows.Forms.TextBox();
             this.submitPurchase = new System.Windows.Forms.Button();
-
             this.Lastname = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label_lastname = new System.Windows.Forms.Label();
             this.label_firstname = new System.Windows.Forms.Label();
             this.label_adress = new System.Windows.Forms.Label();
@@ -50,7 +47,6 @@
             this.textBox_firstname = new System.Windows.Forms.TextBox();
             this.textBox_adress = new System.Windows.Forms.TextBox();
             this.textBox_TVA = new System.Windows.Forms.TextBox();
-
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -106,7 +102,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Right click on the order line that you want to delete ";
             // 
--
             // label2
             // 
             this.label2.Location = new System.Drawing.Point(39, 519);
@@ -148,7 +143,7 @@
             this.submitPurchase.Text = "Confirm the order";
             this.submitPurchase.UseVisualStyleBackColor = true;
             this.submitPurchase.Click += new System.EventHandler(this.submitPurchase_Click);
-
+            // 
             // Lastname
             // 
             this.Lastname.Location = new System.Drawing.Point(1004, 188);
@@ -156,16 +151,6 @@
             this.Lastname.Size = new System.Drawing.Size(100, 26);
             this.Lastname.TabIndex = 5;
             this.Lastname.TextChanged += new System.EventHandler(this.Lastname_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1168, 606);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 59);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Confirm order";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label_lastname
             // 
@@ -230,7 +215,6 @@
             this.textBox_TVA.Size = new System.Drawing.Size(100, 26);
             this.textBox_TVA.TabIndex = 13;
             this.textBox_TVA.TextChanged += new System.EventHandler(this.textBox_TVA_TextChanged);
-
             // 
             // Cart
             // 
@@ -238,13 +222,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1728, 787);
-
             this.Controls.Add(this.submitPurchase);
             this.Controls.Add(this.totalCost);
             this.Controls.Add(this.deliveryDate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-
             this.Controls.Add(this.textBox_TVA);
             this.Controls.Add(this.textBox_adress);
             this.Controls.Add(this.textBox_firstname);
@@ -252,9 +234,7 @@
             this.Controls.Add(this.label_adress);
             this.Controls.Add(this.label_firstname);
             this.Controls.Add(this.label_lastname);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Lastname);
-
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
@@ -284,7 +264,6 @@
         private System.Windows.Forms.Button submitPurchase;
 
         private System.Windows.Forms.TextBox Lastname;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label_lastname;
         private System.Windows.Forms.Label label_firstname;
         private System.Windows.Forms.Label label_adress;

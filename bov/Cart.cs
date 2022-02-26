@@ -124,21 +124,32 @@ namespace bov
             }
             else
             {
-                this.Hide();
-                PurchaseConfirmation frm3 = new PurchaseConfirmation(catalog);
-                frm3.Show();
+                if (Lastname.Text != "" && textBox_firstname.Text != "" && textBox_adress.Text != "" && textBox_TVA.Text != "")
+                {
+                    Customer customer = new Customer(
+                        Lastname.Text,
+                        textBox_firstname.Text,
+                        textBox_adress.Text,
+                        textBox_TVA.Text
+                        );
+                    order.CustomerLinked(customer);
+                    this.Hide();
+                    PurchaseConfirmation frm3 = new PurchaseConfirmation(catalog);
+                    frm3.Show();
+                }
+                else
+                {
+                    MessageBox.Show("You forgot to put a customer");
+                }
             }
+        }
 
         private void Lastname_TextChanged(object sender, EventArgs e)
         {
             //string a = Lastname.Text;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Command performed");
-            Application.Exit();
-        }
+        
 
         private void label_firstname_Click(object sender, EventArgs e)
         {
