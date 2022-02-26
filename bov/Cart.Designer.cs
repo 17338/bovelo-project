@@ -34,6 +34,13 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteThisOrderLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.deliveryDate = new System.Windows.Forms.TextBox();
+            this.totalCost = new System.Windows.Forms.TextBox();
+            this.submitPurchase = new System.Windows.Forms.Button();
+
             this.Lastname = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label_lastname = new System.Windows.Forms.Label();
@@ -43,6 +50,7 @@
             this.textBox_firstname = new System.Windows.Forms.TextBox();
             this.textBox_adress = new System.Windows.Forms.TextBox();
             this.textBox_TVA = new System.Windows.Forms.TextBox();
+
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +106,49 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Right click on the order line that you want to delete ";
             // 
+-
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(39, 519);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(185, 30);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "estimative delivery date :";
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(133, 561);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 29);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "total price :";
+            // 
+            // deliveryDate
+            // 
+            this.deliveryDate.Location = new System.Drawing.Point(230, 516);
+            this.deliveryDate.Name = "deliveryDate";
+            this.deliveryDate.ReadOnly = true;
+            this.deliveryDate.Size = new System.Drawing.Size(180, 26);
+            this.deliveryDate.TabIndex = 7;
+            // 
+            // totalCost
+            // 
+            this.totalCost.Location = new System.Drawing.Point(230, 558);
+            this.totalCost.Name = "totalCost";
+            this.totalCost.ReadOnly = true;
+            this.totalCost.Size = new System.Drawing.Size(180, 26);
+            this.totalCost.TabIndex = 8;
+            // 
+            // submitPurchase
+            // 
+            this.submitPurchase.Location = new System.Drawing.Point(1456, 653);
+            this.submitPurchase.Name = "submitPurchase";
+            this.submitPurchase.Size = new System.Drawing.Size(172, 79);
+            this.submitPurchase.TabIndex = 9;
+            this.submitPurchase.Text = "Confirm the order";
+            this.submitPurchase.UseVisualStyleBackColor = true;
+            this.submitPurchase.Click += new System.EventHandler(this.submitPurchase_Click);
+
             // Lastname
             // 
             this.Lastname.Location = new System.Drawing.Point(1004, 188);
@@ -179,6 +230,7 @@
             this.textBox_TVA.Size = new System.Drawing.Size(100, 26);
             this.textBox_TVA.TabIndex = 13;
             this.textBox_TVA.TextChanged += new System.EventHandler(this.textBox_TVA_TextChanged);
+
             // 
             // Cart
             // 
@@ -186,6 +238,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1728, 787);
+
+            this.Controls.Add(this.submitPurchase);
+            this.Controls.Add(this.totalCost);
+            this.Controls.Add(this.deliveryDate);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+
             this.Controls.Add(this.textBox_TVA);
             this.Controls.Add(this.textBox_adress);
             this.Controls.Add(this.textBox_firstname);
@@ -195,6 +254,7 @@
             this.Controls.Add(this.label_lastname);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Lastname);
+
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
@@ -216,6 +276,13 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deleteThisOrderLineToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox deliveryDate;
+        private System.Windows.Forms.TextBox totalCost;
+        private System.Windows.Forms.Button submitPurchase;
+
         private System.Windows.Forms.TextBox Lastname;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label_lastname;
@@ -225,5 +292,6 @@
         private System.Windows.Forms.TextBox textBox_firstname;
         private System.Windows.Forms.TextBox textBox_adress;
         private System.Windows.Forms.TextBox textBox_TVA;
+
     }
 }

@@ -34,7 +34,12 @@ namespace bov
             
             List<string[]> list_bike = new List<string[]>();
             string[] list = null;
+
+            //foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\bike_model.txt"))
+            //foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\bike_model.txt"))
+
             foreach (string line in File.ReadLines(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\bike_model.txt"))
+
                 {
                   list = line.Split(';');
                   list_bike.Add(list);                 
@@ -55,19 +60,39 @@ namespace bov
             price2.Text = bike2.price.ToString();
             price3.Text = bike3.price.ToString();
 
+
+            //pictureBox1.Image = Image.FromFile(@"C:\Users\zakbu\source\repos\bov\bov\explorer.jfif");
+            //pictureBox2.Image = Image.FromFile(@"C:\Users\zakbu\source\repos\bov\bov\explorer.jfif");
+            //pictureBox3.Image = Image.FromFile(@"C:\Users\zakbu\source\repos\bov\bov\explorer.jfif");
+
+            //pictureBox1.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
+            //pictureBox2.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
+            //pictureBox3.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
+
+            //foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\colors.txt"))
+            //foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\colors.txt"))
+                {
+
             pictureBox1.Image = Image.FromFile(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\explorer.jfif");
             pictureBox2.Image = Image.FromFile(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\explorer.jfif");
             pictureBox3.Image = Image.FromFile(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\explorer.jfif");
 
             foreach (string line in File.ReadLines(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\colors.txt"))
             {
+
                 color_choice1.Items.Add(line);
                 color_choice2.Items.Add(line);
                 color_choice3.Items.Add(line);
             }
 
+
+            //foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\sizes.txt"))
+            //foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\sizes.txt"))
+                {
+
             foreach (string line in File.ReadLines(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\sizes.txt"))
             {
+
 
                 size_choice1.Items.Add(line);
                 size_choice2.Items.Add(line);
@@ -112,7 +137,7 @@ namespace bov
         {
             if (color_choice2.SelectedItem == null || size_choice2.SelectedItem == null || quantity_choice2.SelectedItem == null)
             {
-                MessageBox.Show("Selected a color or quantity or size please");
+                MessageBox.Show("Make sure to select a color, a quantity and a size please");
             }
             else
             {
