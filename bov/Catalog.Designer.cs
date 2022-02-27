@@ -62,12 +62,11 @@
             // name1
             // 
             this.name1.AutoSize = true;
-            this.name1.Location = new System.Drawing.Point(92, 23);
+            this.name1.Location = new System.Drawing.Point(239, 23);
             this.name1.Name = "name1";
             this.name1.Size = new System.Drawing.Size(51, 20);
             this.name1.TabIndex = 1;
             this.name1.Text = "label2";
-            this.name1.Click += new System.EventHandler(this.label2_Click);
             // 
             // name2
             // 
@@ -77,12 +76,11 @@
             this.name2.Size = new System.Drawing.Size(51, 20);
             this.name2.TabIndex = 2;
             this.name2.Text = "label2";
-            this.name2.Click += new System.EventHandler(this.name2_Click);
             // 
             // name3
             // 
             this.name3.AutoSize = true;
-            this.name3.Location = new System.Drawing.Point(1328, 23);
+            this.name3.Location = new System.Drawing.Point(1319, 23);
             this.name3.Name = "name3";
             this.name3.Size = new System.Drawing.Size(51, 20);
             this.name3.TabIndex = 3;
@@ -91,22 +89,20 @@
             // color1
             // 
             this.color1.AutoSize = true;
-            this.color1.Location = new System.Drawing.Point(33, 361);
+            this.color1.Location = new System.Drawing.Point(39, 361);
             this.color1.Name = "color1";
             this.color1.Size = new System.Drawing.Size(46, 20);
             this.color1.TabIndex = 4;
             this.color1.Text = "Color";
-            this.color1.Click += new System.EventHandler(this.color1_Click);
             // 
             // size1
             // 
             this.size1.AutoSize = true;
             this.size1.Location = new System.Drawing.Point(39, 440);
             this.size1.Name = "size1";
-            this.size1.Size = new System.Drawing.Size(40, 20);
+            this.size1.Size = new System.Drawing.Size(60, 20);
             this.size1.TabIndex = 5;
-            this.size1.Text = "Size";
-            this.size1.Click += new System.EventHandler(this.label5_Click);
+            this.size1.Text = "Size (\")";
             // 
             // price1
             // 
@@ -116,7 +112,6 @@
             this.price1.Size = new System.Drawing.Size(51, 20);
             this.price1.TabIndex = 6;
             this.price1.Text = "label2";
-            this.price1.Click += new System.EventHandler(this.price1_Click);
             // 
             // price3
             // 
@@ -135,13 +130,13 @@
             this.price2.Size = new System.Drawing.Size(51, 20);
             this.price2.TabIndex = 12;
             this.price2.Text = "label2";
-            this.price2.Click += new System.EventHandler(this.price2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(37, 46);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(458, 293);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -151,14 +146,17 @@
             this.pictureBox2.Location = new System.Drawing.Point(573, 46);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(458, 293);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(1100, 46);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(458, 293);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
@@ -170,7 +168,6 @@
             this.color_choice1.Name = "color_choice1";
             this.color_choice1.Size = new System.Drawing.Size(121, 28);
             this.color_choice1.TabIndex = 16;
-            this.color_choice1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // color_choice2
             // 
@@ -201,10 +198,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(39, 517);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 20);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Price";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Price (€)";
             // 
             // size_choice2
             // 

@@ -48,11 +48,7 @@ namespace bov
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            catalog.Show();
-        }
+        
 
         private void contextMenuStrip1_Click(object sender, EventArgs e)
         {
@@ -133,6 +129,9 @@ namespace bov
                         textBox_TVA.Text
                         );
                     order.CustomerLinked(customer);
+                    Database database = new Database();
+                    database.AddCustomerInDb(customer);
+                    //database.AddOrderInDb(order);
                     this.Hide();
                     PurchaseConfirmation frm3 = new PurchaseConfirmation(catalog);
                     frm3.Show();
@@ -184,6 +183,13 @@ namespace bov
         private void textBox_TVA_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+                this.Hide();
+                catalog.Show();
+            
         }
     }
 }

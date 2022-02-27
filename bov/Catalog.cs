@@ -16,11 +16,13 @@ namespace bov
     public partial class Catalog : Form
     {
         OrderLine orderLine;
-        CatalogShop catalogShop;
+        CatalogShop catalogShop = new CatalogShop();
         BikeModel bike1;
         BikeModel bike2;
         BikeModel bike3;
         Order order = new Order();
+        string path = @"C:\\Users\\zakbu\\OneDrive\\Documents\\GitHub\\bovelo-project\\bov\\";
+
 
         public Catalog()
         {
@@ -31,21 +33,7 @@ namespace bov
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            List<string[]> list_bike = new List<string[]>();
-            string[] list = null;
-
-            foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\bike_model.txt"))
-            //foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\bike_model.txt"))
-
-            //foreach (string line in File.ReadLines(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\bike_model.txt"))
-
-            {
-                list = line.Split(';');
-                list_bike.Add(list);
-            }
-
-            catalogShop = new CatalogShop();
+            
             catalogShop.GetAllBikeModel();
 
             bike1 = catalogShop.bikesModel[0];
@@ -59,50 +47,29 @@ namespace bov
             price1.Text = bike1.price.ToString();
             price2.Text = bike2.price.ToString();
             price3.Text = bike3.price.ToString();
+           
+            pictureBox1.Image = Image.FromFile(path + bike1.image);
+            pictureBox2.Image = Image.FromFile(path + bike2.image);
+            pictureBox3.Image = Image.FromFile(path + bike3.image);
 
-
-            pictureBox1.Image = Image.FromFile(@"C:\Users\zakbu\source\repos\bov\bov\explorer.jfif");
-            pictureBox2.Image = Image.FromFile(@"C:\Users\zakbu\source\repos\bov\bov\explorer.jfif");
-            pictureBox3.Image = Image.FromFile(@"C:\Users\zakbu\source\repos\bov\bov\explorer.jfif");
-
-            //pictureBox1.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
-            //pictureBox2.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
-            //pictureBox3.Image = Image.FromFile(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\explorer.jfif");
-
-            foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\colors.txt"))
+            
+            foreach (string color in catalogShop.Colors())
             {
-                //foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\colors.txt"))
-
-
-                //pictureBox1.Image = Image.FromFile(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\explorer.jfif");
-                //pictureBox2.Image = Image.FromFile(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\explorer.jfif");
-                //pictureBox3.Image = Image.FromFile(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\explorer.jfif");
-
-                //foreach (string line in File.ReadLines(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\colors.txt"))
-                //{
-
-                color_choice1.Items.Add(line);
-                color_choice2.Items.Add(line);
-                color_choice3.Items.Add(line);
+                color_choice1.Items.Add(color);
+                color_choice2.Items.Add(color);
+                color_choice3.Items.Add(color);
             }
 
 
-            foreach (string line in File.ReadLines(@"C:\Users\zakbu\source\repos\bov\bov\sizes.txt"))
+            foreach (string size in catalogShop.Sizes())
             {
-                //foreach (string line in File.ReadLines(@"C:\Users\mathi\OneDrive - ECAM\Documents\GitHub\bovelo-project\bov\sizes.txt"))
-
-
-                //foreach (string line in File.ReadLines(@"C:\Users\riran\source\repos\17338\bovelo-project\bov\sizes.txt"))
-                //{
-
-
-                size_choice1.Items.Add(line);
-                size_choice2.Items.Add(line);
-                size_choice3.Items.Add(line);
+                size_choice1.Items.Add(size);
+                size_choice2.Items.Add(size);
+                size_choice3.Items.Add(size);
 
             }
 
-            for (int i = 1; i < 101; i++)
+            for (int i = 1; i < 51; i++)
             {
                 quantity_choice1.Items.Add(i);
                 quantity_choice2.Items.Add(i);
@@ -205,58 +172,27 @@ namespace bov
 
             }
 
-
-
-            private void label2_Click(object sender, EventArgs e)
-            {
-
-            }
-
-            private void label5_Click(object sender, EventArgs e)
-            {
-
-            }
-
-            private void pictureBox1_Click(object sender, EventArgs e)
-            {
-
-            }
-
-            private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-            {
-
-            }
-
-            private void color1_Click(object sender, EventArgs e)
-            {
-
-            }
-
-            private void price1_Click(object sender, EventArgs e)
-            {
-
-            }
-
-            private void price2_Click(object sender, EventArgs e)
-            {
-
-            }
-
-            private void label1_Click(object sender, EventArgs e)
-            {
-
-            }
-
-            private void pictureBox3_Click(object sender, EventArgs e)
-            {
-
-            }
-
-            private void name2_Click(object sender, EventArgs e)
-            {
-
-            }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Description frm3 = new Description(bike1, this);
+            frm3.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Description frm3 = new Description(bike2, this);
+            frm3.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Description frm3 = new Description(bike3, this);
+            frm3.Show();
+        }
+    }
 
     }
 

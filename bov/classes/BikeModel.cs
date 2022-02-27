@@ -12,14 +12,16 @@ namespace bov.classes
         public string description;
         public float price;
         public float buildingTime;
+        public string image;
 
 
-        public BikeModel(string name, string description, float price, float buildingTime)
+        public BikeModel(string name, string description, float price, float buildingTime, string image)
         {
             this.name = name;
             this.description = description;
             this.price = price;
-            this.buildingTime = buildingTime; 
+            this.buildingTime = buildingTime;
+            this.image = image;
            
             
         }
