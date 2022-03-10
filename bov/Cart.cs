@@ -131,7 +131,7 @@ namespace bov
                     order.CustomerLinked(customer);
                     Database database = new Database();
                     database.AddCustomerInDb(customer);
-                    //database.AddOrderInDb(order);
+                    database.AddOrderInDb(order);
                     this.Hide();
                     PurchaseConfirmation frm3 = new PurchaseConfirmation(catalog);
                     frm3.Show();

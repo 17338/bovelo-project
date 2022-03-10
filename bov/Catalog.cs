@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace bov
 {
 
@@ -21,7 +22,8 @@ namespace bov
         BikeModel bike2;
         BikeModel bike3;
         Order order = new Order();
-        string path = @"C:\\Users\\zakbu\\OneDrive\\Documents\\GitHub\\bovelo-project\\bov\\";
+        // string path = @"C:\\Users\\zakbu\\OneDrive\\Documents\\GitHub\\bovelo-project\\bov\\";
+        string path = @"C:\\Users\\Tafita\\Downloads\\bovelo-project-main\\bov\\";
 
 
         public Catalog()
@@ -192,6 +194,8 @@ namespace bov
             Description frm3 = new Description(bike3, this);
             frm3.Show();
         }
+
+      
     }
 
     }

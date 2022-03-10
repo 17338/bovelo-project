@@ -77,7 +77,7 @@ namespace bov.classes
             MySqlCommand cmd = new MySqlCommand(query, conn);
             MySqlDataReader rdr = cmd.ExecuteReader();
             Console.WriteLine("Element added to DB");
-            cmd.Dispose();
+            rdr.Dispose();
             conn.Close();
         }
 
@@ -94,6 +94,7 @@ namespace bov.classes
         {
             if (getIdCustomer(customer).Count() ==0 )
             { 
+                
             string queryOB = "INSERT INTO customer (lastname,firstname,address,TVA) VALUES('"
                 + customer.lastName + "', '" +
                customer.firstName + "', '" +
@@ -107,13 +108,13 @@ namespace bov.classes
 
         public void AddOrderInDb(Order order) //is used to pass a new order  HAVE TO CHANGE
         {
-           
-            string queryOB = "INSERT INTO order (date,deliveryEstimateDate,totalPrice,status,customer_idcustomer) VALUES ('" 
-                + order.date + "', '" + 
-                order.estimateDate + "', '" + 
+            Console.WriteLine(getIdCustomer(order.customer)[0][0]);
+                string queryOB = "INSERT INTO group4.order (date,deliveryEstimateDate,totalPrice,status,customer_idcustomer) VALUES ('" 
+                + order.date.ToString("yyyy-M-dd hh:mm:ss") + "', '" + 
+                order.estimateDate?.ToString("yyyy-M-dd hh:mm:ss") + "', '" + 
                 order.totalPrice + "', '" +
-                order.status + "', '" +
-                3 + "'); ";
+                0 + "', '" +
+                getIdCustomer(order.customer)[0][0] + "'); ";
             
             sendToDB(queryOB);
         }
