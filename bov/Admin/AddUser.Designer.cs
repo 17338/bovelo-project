@@ -85,7 +85,6 @@ namespace Bovelo
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 24);
             this.comboBox1.TabIndex = 16;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBox8
             // 
@@ -97,7 +96,6 @@ namespace Bovelo
             this.textBox8.TabIndex = 15;
             this.textBox8.Tag = "";
             this.textBox8.Text = "Password";
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // textBox7
             // 
@@ -109,7 +107,6 @@ namespace Bovelo
             this.textBox7.TabIndex = 14;
             this.textBox7.Tag = "";
             this.textBox7.Text = "Username";
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox6
             // 
@@ -132,7 +129,6 @@ namespace Bovelo
             this.textBox5.TabIndex = 12;
             this.textBox5.Tag = "";
             this.textBox5.Text = "Name";
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label9
             // 
@@ -161,7 +157,6 @@ namespace Bovelo
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddUser";
             this.Text = "AddUser";
-            this.Load += new System.EventHandler(this.AddUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

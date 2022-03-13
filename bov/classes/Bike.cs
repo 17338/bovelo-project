@@ -15,8 +15,5 @@ namespace bov.classes
             this.bikeModel = bikeModel;
             bikeStatus = false;
         }
-
-       
-
     }
 }

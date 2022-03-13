@@ -15,7 +15,7 @@ namespace bov.classes
         { 
             var listFromDB = new List<List<string>>();
         
-            string connStr = "server=localhost;user=root;database=group4;port=3306;password=root";
+            string connStr = "server=localhost;user=root;database=bovelo;port=3306;password=root";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             string sql = "SELECT * FROM " + DBTable + ";";
@@ -38,7 +38,7 @@ namespace bov.classes
         public List<List<string>> getfromdbbyquery(string query)
         {
             var listFromDB = new List<List<string>>();
-            string connStr = "server=localhost;user=root;database=group4;port=3306;password=root";
+            string connStr = "server=localhost;user=root;database=bovelo;port=3306;password=root";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -70,7 +70,7 @@ namespace bov.classes
 
         public void sendToDB(string query) //is used to send anything to the database
         {
-            string connStr = "server=localhost;user=root;database=group4;port=3306;password=root";
+            string connStr = "server=localhost;user=root;database=bovelo;port=3306;password=root";
             MySqlConnection conn = new MySqlConnection(connStr);
             Console.WriteLine("Connecting to MySQL to send new element...");
             conn.Open();
@@ -109,7 +109,7 @@ namespace bov.classes
         public void AddOrderInDb(Order order) //is used to pass a new order  HAVE TO CHANGE
         {
             Console.WriteLine(getIdCustomer(order.customer)[0][0]);
-                string queryOB = "INSERT INTO group4.order (date,deliveryEstimateDate,totalPrice,status,customer_idcustomer) VALUES ('" 
+                string queryOB = "INSERT INTO bovelo.order (date,deliveryEstimateDate,totalPrice,status,customer_idcustomer) VALUES ('"
                 + order.date.ToString("yyyy-M-dd hh:mm:ss") + "', '" + 
                 order.estimateDate?.ToString("yyyy-M-dd hh:mm:ss") + "', '" + 
                 order.totalPrice + "', '" +

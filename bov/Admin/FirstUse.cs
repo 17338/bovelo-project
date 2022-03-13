@@ -51,7 +51,9 @@ namespace Bovelo
                     string USERNAME = "Admin";
                     string PASSWORD = textBox4.Text;
                     string JOB = "Administrator";
-                    MySqlConnection myDbConn = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
+                    //server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306
+                    //"server=localhost;user=root;database=group4;port=3306;password=root";
+                    MySqlConnection myDbConn = new MySqlConnection(@"server=localhost;user=root;database=bovelo;port=3306;password=root");
                     try
                     {
                         myDbConn.Open();

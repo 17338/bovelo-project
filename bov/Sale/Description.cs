@@ -15,8 +15,8 @@ namespace bov
     {
         Catalog catalog;
         BikeModel bikeModel;
-        //string path = @"C:\\Users\\zakbu\\OneDrive\\Documents\\GitHub\\bovelo-project\\bov\\";
-        string path = @"C:\\Users\\Tafita\\Downloads\\bovelo-project-main\\bov\\";
+        string path = @"C:\\Users\\zakbu\\OneDrive\\Documents\\GitHub\\bovelo-project\\bov\\";
+        //string path = @"C:\\Users\\Tafita\\Downloads\\bovelo-project-main\\bov\\";
         public Description(BikeModel bikeModel, Catalog catalog)
         {
             InitializeComponent();

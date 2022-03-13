@@ -98,99 +98,96 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddUser.cs">
+    <Compile Include="Admin\AddUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddUser.Designer.cs">
+    <Compile Include="Admin\AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cart.cs">
+    <Compile Include="Sale\Cart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cart.Designer.cs">
+    <Compile Include="Sale\Cart.Designer.cs">
       <DependentUpon>Cart.cs</DependentUpon>
     </Compile>
-    <Compile Include="classes\Bike.cs" />
-    <Compile Include="classes\BikeModel.cs" />
-    <Compile Include="classes\CatalogShop.cs" />
-    <Compile Include="Catalog.cs">
+    <Compile Include="Classes\Bike.cs" />
+    <Compile Include="Classes\BikeModel.cs" />
+    <Compile Include="Classes\CatalogShop.cs" />
+    <Compile Include="Sale\Catalog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Catalog.Designer.cs">
+    <Compile Include="Sale\Catalog.Designer.cs">
       <DependentUpon>Catalog.cs</DependentUpon>
     </Compile>
-    <Compile Include="classes\Customer.cs" />
-    <Compile Include="classes\Database.cs" />
-    <Compile Include="classes\Order.cs" />
-    <Compile Include="classes\OrderLine.cs" />
-    <Compile Include="Description.cs">
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\Database.cs" />
+    <Compile Include="Classes\Order.cs" />
+    <Compile Include="Classes\OrderLine.cs" />
+    <Compile Include="Sale\Description.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Description.Designer.cs">
+    <Compile Include="Sale\Description.Designer.cs">
       <DependentUpon>Description.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditUser.cs">
+    <Compile Include="Admin\EditUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditUser.Designer.cs">
+    <Compile Include="Admin\EditUser.Designer.cs">
       <DependentUpon>EditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="FirstUse.cs">
+    <Compile Include="Admin\FirstUse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FirstUse.Designer.cs">
+    <Compile Include="Admin\FirstUse.Designer.cs">
       <DependentUpon>FirstUse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Admin\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Admin\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="Admin\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
+    <Compile Include="Admin\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model.cs" />
-    <Compile Include="Part.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PurchaseConfirmation.cs">
+    <Compile Include="Sale\PurchaseConfirmation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PurchaseConfirmation.Designer.cs">
+    <Compile Include="Sale\PurchaseConfirmation.Designer.cs">
       <DependentUpon>PurchaseConfirmation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Size.cs" />
-    <Compile Include="UserManager.cs" />
-    <Compile Include="UserSetting.cs">
+    <Compile Include="Classes\UserManager.cs" />
+    <Compile Include="Admin\UserSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserSetting.Designer.cs" />
-    <EmbeddedResource Include="AddUser.resx">
+    <Compile Include="Admin\UserSetting.Designer.cs" />
+    <EmbeddedResource Include="Admin\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cart.resx">
+    <EmbeddedResource Include="Sale\Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Catalog.resx">
+    <EmbeddedResource Include="Sale\Catalog.resx">
       <DependentUpon>Catalog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Description.resx">
+    <EmbeddedResource Include="Sale\Description.resx">
       <DependentUpon>Description.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditUser.resx">
+    <EmbeddedResource Include="Admin\EditUser.resx">
       <DependentUpon>EditUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FirstUse.resx">
+    <EmbeddedResource Include="Admin\FirstUse.resx">
       <DependentUpon>FirstUse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Admin\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
+    <EmbeddedResource Include="Admin\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -202,10 +199,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PurchaseConfirmation.resx">
+    <EmbeddedResource Include="Sale\PurchaseConfirmation.resx">
       <DependentUpon>PurchaseConfirmation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserSetting.resx" />
+    <EmbeddedResource Include="Admin\UserSetting.resx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -222,12 +219,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="adventure.png" />
-    <Content Include="bike_model.txt" />
     <Content Include="city.png" />
-    <Content Include="colors.txt" />
-    <Content Include="explorer.jfif" />
     <Content Include="explorer.png" />
-    <Content Include="sizes.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

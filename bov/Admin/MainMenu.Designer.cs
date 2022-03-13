@@ -43,7 +43,6 @@ namespace Bovelo
             this.label9.Size = new System.Drawing.Size(122, 17);
             this.label9.TabIndex = 3;
             this.label9.Text = "MENU PRINCIPAL";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label7
             // 
@@ -89,7 +88,6 @@ namespace Bovelo
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainMenu";
             this.Text = "MainMenu";
-            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

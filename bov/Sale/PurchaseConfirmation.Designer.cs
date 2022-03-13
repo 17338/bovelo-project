@@ -65,7 +65,6 @@ namespace bov
             this.Name = "PurchaseConfirmation";
             this.Text = "PurchaseConfirmation";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.PurchaseConfirmation_Load);
             this.ResumeLayout(false);
 
         }

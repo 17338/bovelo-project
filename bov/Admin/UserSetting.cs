@@ -20,21 +20,12 @@ namespace Bovelo
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
 
         private void label8_Click(object sender, EventArgs e)
         {
             EditUser editUser = new EditUser();
             this.Hide();
             editUser.Show();
-
-            
-
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -50,5 +41,7 @@ namespace Bovelo
             this.Hide();
             mainMenu.Show();
         }
+
+        
     }
 }

@@ -1,3 +1,0 @@
-﻿adventure;hahahahhah;10,50;30
-city;hahahahhah;100000,50;30
-explorer;hahahahhah;1050;30

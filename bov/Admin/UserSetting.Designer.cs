@@ -89,7 +89,7 @@ namespace Bovelo
             this.label6.Size = new System.Drawing.Size(113, 20);
             this.label6.TabIndex = 11;
             this.label6.Text = "USERS SETTING";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            
             // 
             // UserSetting
             // 

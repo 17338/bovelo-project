@@ -40,9 +40,10 @@ namespace Bovelo
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(105, 25);
+            this.button7.Location = new System.Drawing.Point(105, 20);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 29);
+            this.button7.Size = new System.Drawing.Size(94, 23);
             this.button7.TabIndex = 11;
             this.button7.Text = "Edit";
             this.button7.UseVisualStyleBackColor = true;
@@ -50,9 +51,10 @@ namespace Bovelo
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(5, 25);
+            this.button6.Location = new System.Drawing.Point(5, 20);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 29);
+            this.button6.Size = new System.Drawing.Size(94, 23);
             this.button6.TabIndex = 10;
             this.button6.Text = "Delete";
             this.button6.UseVisualStyleBackColor = true;
@@ -63,13 +65,13 @@ namespace Bovelo
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
-            this.dataGridView1.Location = new System.Drawing.Point(7, 60);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 48);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(781, 225);
+            this.dataGridView1.Size = new System.Drawing.Size(781, 180);
             this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column1
             // 
@@ -83,15 +85,16 @@ namespace Bovelo
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(2, 2);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(151, 20);
+            this.label11.Size = new System.Drawing.Size(152, 17);
             this.label11.TabIndex = 8;
             this.label11.Text = "EDIT / REMOVE USER";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(205, 25);
+            this.button4.Location = new System.Drawing.Point(205, 20);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 29);
+            this.button4.Size = new System.Drawing.Size(94, 23);
             this.button4.TabIndex = 20;
             this.button4.Text = "Back";
             this.button4.UseVisualStyleBackColor = true;
@@ -99,15 +102,16 @@ namespace Bovelo
             // 
             // EditUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 360);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label11);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EditUser";
             this.Text = "EditUser";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

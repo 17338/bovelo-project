@@ -41,6 +41,8 @@ namespace Bovelo
         }
         public static bool CheckIfNewInstallation()
         {
+            //server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306
+            //server=localhost;user=root;database=group4;port=3306;password=root
             MySqlConnection connect = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
             try
             {
