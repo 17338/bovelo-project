@@ -28,5 +28,7 @@ namespace bov
             Catalog new_catalog = new Catalog();
             new_catalog.Show();
         }
+
+      
     }
 }

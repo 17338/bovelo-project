@@ -9,11 +9,11 @@ namespace bov.classes
     public class Bike
     {
         public BikeModel bikeModel;
-        public bool bikeStatus;
+        public int bikeStatus;
         public Bike(BikeModel bikeModel)
         {
             this.bikeModel = bikeModel;
-            bikeStatus = false;
+            bikeStatus = 0;
         }
     }
 }

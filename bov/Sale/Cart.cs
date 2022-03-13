@@ -114,6 +114,15 @@ namespace bov
                     Database database = new Database();
                     database.AddCustomerInDb(customer);
                     database.AddOrderInDb(order);
+                    foreach(OrderLine orderLine in order.orderLines)
+                    {
+                        database.AddOrderLineInDb(orderLine);
+                        for(int i =0; i < orderLine.quantity; i++)
+                        {
+                            Bike bike = new Bike(orderLine.bikeModel);
+                            database.AddBikeInDb(bike);
+                        }
+                    }
                     this.Hide();
                     PurchaseConfirmation frm3 = new PurchaseConfirmation(catalog);
                     frm3.Show();

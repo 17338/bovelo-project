@@ -119,7 +119,38 @@ namespace bov.classes
             sendToDB(queryOB);
         }
 
-        
+
+        public void AddOrderLineInDb(OrderLine orderLine)
+        {
+            int index = getfromdb("bovelo.order").Count - 1;
+            string queryOB = "INSERT INTO bovelo.orderline (quantity,order_idorder,size_idsize, color_idcolor, modelbike_idmodelbike) VALUES ('"
+                + orderLine.quantity + "', '" +
+                getfromdb("bovelo.order")[index][0] + "', '" +
+                getfromdbbyquery("SELECT * FROM bovelo.size WHERE sizecol = '"
+                + orderLine.size + "'; ")[0][0] + "', '" +
+                getfromdbbyquery("SELECT * FROM bovelo.color WHERE name = '"
+                + orderLine.color + "'; ")[0][0] + "', '" +
+                getfromdbbyquery("SELECT * FROM bovelo.modelbike WHERE name = '"
+                + orderLine.bikeModel.name + "'; ")[0][0] +
+                "'); ";
+
+            sendToDB(queryOB);
+        }
+
+        public void AddBikeInDb(Bike bike)
+        {
+
+            int index = getfromdb("bovelo.orderline").Count - 1;
+            string queryOB = "INSERT INTO bovelo.bikes (status, modelbike_idmodelbike, orderline_idorderline) VALUES ('"
+                + bike.bikeStatus + "', '" +
+                getfromdbbyquery("SELECT * FROM bovelo.modelbike WHERE name = '"
+                + bike.bikeModel.name + "'; ")[0][0] + "', '" +
+                getfromdb("bovelo.orderline")[index][0] +
+                "'); ";
+
+            sendToDB(queryOB);
+        }
+
 
     }
 }
