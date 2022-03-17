@@ -19,15 +19,16 @@ namespace bov
             //Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (UserManager.CheckIfNewInstallation())
-            {
-                Application.Run(new FirstUse());
-            }
-            else
-            {
-                Application.Run(new Login());
+            //if (UserManager.CheckIfNewInstallation())
+            //{
+            //    Application.Run(new FirstUse());
+            //}
+            //else
+            //{
+            //    Application.Run(new Login());
 
-            }
+            //}
+            Application.Run(new workerschedule());
         }
     }
 }

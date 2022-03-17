@@ -45,5 +45,9 @@ namespace Bovelo
             }
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
