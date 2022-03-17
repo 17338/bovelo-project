@@ -22,7 +22,7 @@ namespace bov
         BikeModel bike2;
         BikeModel bike3;
         Order order = new Order();
-        string path = @"C:\\Users\\zakbu\\OneDrive\\Documents\\GitHub\\bovelo-project\\bov\\";
+        //string path = @"C:\\Users\\zakbu\\OneDrive\\Documents\\GitHub\\bovelo-project\\bov\\";
         //string path = @"C:\\Users\\Tafita\\Downloads\\bovelo-project-main\\bov\\";
 
 
@@ -50,9 +50,9 @@ namespace bov
             price2.Text = bike2.price.ToString();
             price3.Text = bike3.price.ToString();
            
-            pictureBox1.Image = Image.FromFile(path + bike1.image);
-            pictureBox2.Image = Image.FromFile(path + bike2.image);
-            pictureBox3.Image = Image.FromFile(path + bike3.image);
+            //pictureBox1.Image = Image.FromFile(path + bike1.image);
+           // pictureBox2.Image = Image.FromFile(path + bike2.image);
+           // pictureBox3.Image = Image.FromFile(path + bike3.image);
 
             
             foreach (string color in catalogShop.Colors())

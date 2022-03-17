@@ -10,12 +10,13 @@ namespace bov.classes
 {
     public class Database
     {
+        string connStr = "server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo";
         
         public List<List<string>> getfromdb(string DBTable)
         { 
             var listFromDB = new List<List<string>>();
         
-            string connStr = "server=localhost;user=root;database=bovelo;port=3306;password=root";
+           // string connStr = "server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             string sql = "SELECT * FROM " + DBTable + ";";
@@ -38,7 +39,7 @@ namespace bov.classes
         public List<List<string>> getfromdbbyquery(string query)
         {
             var listFromDB = new List<List<string>>();
-            string connStr = "server=localhost;user=root;database=bovelo;port=3306;password=root";
+            //string connStr = "server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo";
             MySqlConnection conn = new MySqlConnection(connStr);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -70,7 +71,7 @@ namespace bov.classes
 
         public void sendToDB(string query) //is used to send anything to the database
         {
-            string connStr = "server=localhost;user=root;database=bovelo;port=3306;password=root";
+            //string connStr = "server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo";
             MySqlConnection conn = new MySqlConnection(connStr);
             Console.WriteLine("Connecting to MySQL to send new element...");
             conn.Open();

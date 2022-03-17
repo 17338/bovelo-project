@@ -198,6 +198,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Sale\PurchaseConfirmation.resx">
       <DependentUpon>PurchaseConfirmation.cs</DependentUpon>
@@ -218,9 +219,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="adventure.png" />
-    <Content Include="city.png" />
-    <Content Include="explorer.png" />
+    <Content Include="Ressources\adventure.png" />
+    <Content Include="Ressources\city.png" />
+    <Content Include="Ressources\explorer.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
