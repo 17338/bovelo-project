@@ -43,8 +43,8 @@ namespace bov
             order.estimateDate = DateTime.Today;
             order.totalBuildingTime = 0;
             order.TotalOrder();
-            deliveryDate.Text = order.estimateDate.ToString();
-            totalCost.Text = order.totalPrice.ToString() + "€";
+            EstimativeDeliveryDateDisplay.Text = order.estimateDate.ToString();
+            TotalCostDisplay.Text = order.totalPrice.ToString() + "€";
 
         }
 
@@ -67,57 +67,55 @@ namespace bov
                 order.estimateDate = DateTime.Today;
                 order.totalBuildingTime = 0;
                 order.TotalOrder();
-                deliveryDate.Text = order.estimateDate.ToString();
-                totalCost.Text = order.totalPrice.ToString() + "€";
+                EstimativeDeliveryDateDisplay.Text = order.estimateDate.ToString();
+                TotalCostDisplay.Text = order.totalPrice.ToString() + "€";
             }
             else
             {
                 order.totalPrice = 0;
-                totalCost.Text = order.totalPrice.ToString() + "€";
+                TotalCostDisplay.Text = order.totalPrice.ToString() + "€";
                 order.estimateDate = null;
-                deliveryDate.Text = "/";
+                EstimativeDeliveryDateDisplay.Text = "/";
             }
         }
 
-        private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
-            {
-                dataGridView1.Rows[e.RowIndex].Selected = true;
-                rowIndex = e.RowIndex;
-                dataGridView1.CurrentCell = dataGridView1.Rows[rowIndex].Cells[1];
-                this.contextMenuStrip1.Show(dataGridView1, e.Location);
-                contextMenuStrip1.Show(Cursor.Position);
-            }
+
         }
 
-        
+        private void BackToTheCatalogBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            catalog.Show();
+        }
 
-
-        private void submitPurchase_Click(object sender, EventArgs e)
+        private void SubmitPurchaseBtn_Click(object sender, EventArgs e)
         {
             if (dataGridView1.Rows.Count <= 1)
             {
-                MessageBox.Show("Your cart is currently empty");
+                EmptyCartMsg emptyCart = new EmptyCartMsg();
+                emptyCart.Show();
             }
             else
             {
-                if (Lastname.Text != "" && textBox_firstname.Text != "" && textBox_adress.Text != "" && textBox_TVA.Text != "")
+                if (LastnameInput.Text != "" && FirstnameInput.Text != "" && AdressInput.Text != "" && TVAInput.Text != "")
                 {
                     Customer customer = new Customer(
-                        Lastname.Text,
-                        textBox_firstname.Text,
-                        textBox_adress.Text,
-                        textBox_TVA.Text
+                        LastnameInput.Text,
+                        FirstnameInput.Text,
+                        AdressInput.Text,
+                        TVAInput.Text
                         );
                     order.CustomerLinked(customer);
                     Database database = new Database();
                     database.AddCustomerInDb(customer);
                     database.AddOrderInDb(order);
-                    foreach(OrderLine orderLine in order.orderLines)
+                    foreach (OrderLine orderLine in order.orderLines)
                     {
                         database.AddOrderLineInDb(orderLine);
-                        for(int i =0; i < orderLine.quantity; i++)
+                        for (int i = 0; i < orderLine.quantity; i++)
                         {
                             Bike bike = new Bike(orderLine.bikeModel);
                             database.AddBikeInDb(bike);
@@ -129,17 +127,10 @@ namespace bov
                 }
                 else
                 {
-                    MessageBox.Show("You forgot to put a customer");
+                    MissingCustomerMsg missingCustomer = new MissingCustomerMsg();
+                    missingCustomer.Show();
                 }
             }
-        }
-
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-                this.Hide();
-                catalog.Show();
-            
         }
     }
 }

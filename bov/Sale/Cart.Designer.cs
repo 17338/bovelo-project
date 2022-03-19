@@ -29,49 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cart));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteThisOrderLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.deliveryDate = new System.Windows.Forms.TextBox();
-            this.totalCost = new System.Windows.Forms.TextBox();
-            this.submitPurchase = new System.Windows.Forms.Button();
-            this.Lastname = new System.Windows.Forms.TextBox();
-            this.label_lastname = new System.Windows.Forms.Label();
-            this.label_firstname = new System.Windows.Forms.Label();
-            this.label_adress = new System.Windows.Forms.Label();
-            this.label_TVA = new System.Windows.Forms.Label();
-            this.textBox_firstname = new System.Windows.Forms.TextBox();
-            this.textBox_adress = new System.Windows.Forms.TextBox();
-            this.textBox_TVA = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.EstimativeDeliveryDate = new System.Windows.Forms.Label();
+            this.TotalPrice = new System.Windows.Forms.Label();
+            this.EstimativeDeliveryDateDisplay = new System.Windows.Forms.TextBox();
+            this.TotalCostDisplay = new System.Windows.Forms.TextBox();
+            this.IndicationForCustomer = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.LastnameInput = new System.Windows.Forms.TextBox();
+            this.Lastname = new System.Windows.Forms.Label();
+            this.Firstname = new System.Windows.Forms.Label();
+            this.Adress = new System.Windows.Forms.Label();
+            this.TVA = new System.Windows.Forms.Label();
+            this.FirstnameInput = new System.Windows.Forms.TextBox();
+            this.AdressInput = new System.Windows.Forms.TextBox();
+            this.TVAInput = new System.Windows.Forms.TextBox();
+            this.YourShoppingCart = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BoveloLogoPanel = new System.Windows.Forms.Panel();
+            this.MountainImagePanel = new System.Windows.Forms.Panel();
+            this.BackToTheCatalogBtn = new bov.classes.RoundButton();
+            this.SubmitPurchaseBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(43, 607);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(191, 58);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Back to the catalog";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 106);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(757, 365);
-            this.dataGridView1.TabIndex = 3;
             // 
             // contextMenuStrip1
             // 
@@ -88,176 +73,295 @@
             this.deleteThisOrderLineToolStripMenuItem.Size = new System.Drawing.Size(247, 32);
             this.deleteThisOrderLineToolStripMenuItem.Text = "Delete this order line";
             // 
-            // label1
+            // EstimativeDeliveryDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(898, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 20);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Right click on the order line that you want to delete ";
+            this.EstimativeDeliveryDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.EstimativeDeliveryDate.Location = new System.Drawing.Point(187, 648);
+            this.EstimativeDeliveryDate.Name = "EstimativeDeliveryDate";
+            this.EstimativeDeliveryDate.Size = new System.Drawing.Size(185, 30);
+            this.EstimativeDeliveryDate.TabIndex = 5;
+            this.EstimativeDeliveryDate.Text = "estimative delivery date :";
             // 
-            // label2
+            // TotalPrice
             // 
-            this.label2.Location = new System.Drawing.Point(39, 519);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 30);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "estimative delivery date :";
+            this.TotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.TotalPrice.Location = new System.Drawing.Point(281, 690);
+            this.TotalPrice.Name = "TotalPrice";
+            this.TotalPrice.Size = new System.Drawing.Size(91, 27);
+            this.TotalPrice.TabIndex = 6;
+            this.TotalPrice.Text = "total price :";
             // 
-            // label3
+            // EstimativeDeliveryDateDisplay
             // 
-            this.label3.Location = new System.Drawing.Point(133, 561);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 29);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "total price :";
+            this.EstimativeDeliveryDateDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.EstimativeDeliveryDateDisplay.BackColor = System.Drawing.Color.White;
+            this.EstimativeDeliveryDateDisplay.Location = new System.Drawing.Point(383, 645);
+            this.EstimativeDeliveryDateDisplay.Name = "EstimativeDeliveryDateDisplay";
+            this.EstimativeDeliveryDateDisplay.ReadOnly = true;
+            this.EstimativeDeliveryDateDisplay.Size = new System.Drawing.Size(141, 26);
+            this.EstimativeDeliveryDateDisplay.TabIndex = 7;
             // 
-            // deliveryDate
+            // TotalCostDisplay
             // 
-            this.deliveryDate.Location = new System.Drawing.Point(230, 516);
-            this.deliveryDate.Name = "deliveryDate";
-            this.deliveryDate.ReadOnly = true;
-            this.deliveryDate.Size = new System.Drawing.Size(180, 26);
-            this.deliveryDate.TabIndex = 7;
+            this.TotalCostDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TotalCostDisplay.BackColor = System.Drawing.Color.White;
+            this.TotalCostDisplay.Location = new System.Drawing.Point(383, 687);
+            this.TotalCostDisplay.Name = "TotalCostDisplay";
+            this.TotalCostDisplay.ReadOnly = true;
+            this.TotalCostDisplay.Size = new System.Drawing.Size(141, 26);
+            this.TotalCostDisplay.TabIndex = 8;
             // 
-            // totalCost
+            // IndicationForCustomer
             // 
-            this.totalCost.Location = new System.Drawing.Point(230, 558);
-            this.totalCost.Name = "totalCost";
-            this.totalCost.ReadOnly = true;
-            this.totalCost.Size = new System.Drawing.Size(180, 26);
-            this.totalCost.TabIndex = 8;
+            this.IndicationForCustomer.AutoSize = true;
+            this.IndicationForCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IndicationForCustomer.Location = new System.Drawing.Point(382, 127);
+            this.IndicationForCustomer.Name = "IndicationForCustomer";
+            this.IndicationForCustomer.Size = new System.Drawing.Size(418, 22);
+            this.IndicationForCustomer.TabIndex = 14;
+            this.IndicationForCustomer.Text = "Right click on the order line that you want to delete ";
             // 
-            // submitPurchase
+            // dataGridView1
             // 
-            this.submitPurchase.Location = new System.Drawing.Point(1456, 653);
-            this.submitPurchase.Name = "submitPurchase";
-            this.submitPurchase.Size = new System.Drawing.Size(172, 79);
-            this.submitPurchase.TabIndex = 9;
-            this.submitPurchase.Text = "Confirm the order";
-            this.submitPurchase.UseVisualStyleBackColor = true;
-            this.submitPurchase.Click += new System.EventHandler(this.submitPurchase_Click);
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(383, 165);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(859, 462);
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // LastnameInput
+            // 
+            this.LastnameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LastnameInput.Location = new System.Drawing.Point(1415, 450);
+            this.LastnameInput.Name = "LastnameInput";
+            this.LastnameInput.Size = new System.Drawing.Size(100, 26);
+            this.LastnameInput.TabIndex = 5;
             // 
             // Lastname
             // 
-            this.Lastname.Location = new System.Drawing.Point(1004, 188);
+            this.Lastname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lastname.AutoSize = true;
+            this.Lastname.Location = new System.Drawing.Point(1321, 450);
             this.Lastname.Name = "Lastname";
-            this.Lastname.Size = new System.Drawing.Size(100, 26);
-            this.Lastname.TabIndex = 5;
+            this.Lastname.Size = new System.Drawing.Size(88, 20);
+            this.Lastname.TabIndex = 7;
+            this.Lastname.Text = "Lastname :";
             // 
-            // label_lastname
+            // Firstname
             // 
-            this.label_lastname.AutoSize = true;
-            this.label_lastname.Location = new System.Drawing.Point(904, 188);
-            this.label_lastname.Name = "label_lastname";
-            this.label_lastname.Size = new System.Drawing.Size(94, 20);
-            this.label_lastname.TabIndex = 7;
-            this.label_lastname.Text = "Last Name :";
+            this.Firstname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Firstname.AutoSize = true;
+            this.Firstname.Location = new System.Drawing.Point(1321, 500);
+            this.Firstname.Name = "Firstname";
+            this.Firstname.Size = new System.Drawing.Size(88, 20);
+            this.Firstname.TabIndex = 8;
+            this.Firstname.Text = "Firstname :";
             // 
-            // label_firstname
+            // Adress
             // 
-            this.label_firstname.AutoSize = true;
-            this.label_firstname.Location = new System.Drawing.Point(904, 235);
-            this.label_firstname.Name = "label_firstname";
-            this.label_firstname.Size = new System.Drawing.Size(88, 20);
-            this.label_firstname.TabIndex = 8;
-            this.label_firstname.Text = "Firstname :";
+            this.Adress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Adress.AutoSize = true;
+            this.Adress.Location = new System.Drawing.Point(1342, 600);
+            this.Adress.Name = "Adress";
+            this.Adress.Size = new System.Drawing.Size(67, 20);
+            this.Adress.TabIndex = 9;
+            this.Adress.Text = "Adress :";
             // 
-            // label_adress
+            // TVA
             // 
-            this.label_adress.AutoSize = true;
-            this.label_adress.Location = new System.Drawing.Point(904, 281);
-            this.label_adress.Name = "label_adress";
-            this.label_adress.Size = new System.Drawing.Size(67, 20);
-            this.label_adress.TabIndex = 9;
-            this.label_adress.Text = "Adress :";
+            this.TVA.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.TVA.AutoSize = true;
+            this.TVA.Location = new System.Drawing.Point(1361, 553);
+            this.TVA.Name = "TVA";
+            this.TVA.Size = new System.Drawing.Size(48, 20);
+            this.TVA.TabIndex = 10;
+            this.TVA.Text = "TVA :";
             // 
-            // label_TVA
+            // FirstnameInput
             // 
-            this.label_TVA.AutoSize = true;
-            this.label_TVA.Location = new System.Drawing.Point(904, 324);
-            this.label_TVA.Name = "label_TVA";
-            this.label_TVA.Size = new System.Drawing.Size(48, 20);
-            this.label_TVA.TabIndex = 10;
-            this.label_TVA.Text = "TVA :";
+            this.FirstnameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.FirstnameInput.Location = new System.Drawing.Point(1415, 500);
+            this.FirstnameInput.Name = "FirstnameInput";
+            this.FirstnameInput.Size = new System.Drawing.Size(100, 26);
+            this.FirstnameInput.TabIndex = 11;
             // 
-            // textBox_firstname
+            // AdressInput
             // 
-            this.textBox_firstname.Location = new System.Drawing.Point(1004, 235);
-            this.textBox_firstname.Name = "textBox_firstname";
-            this.textBox_firstname.Size = new System.Drawing.Size(100, 26);
-            this.textBox_firstname.TabIndex = 11;
+            this.AdressInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.AdressInput.Location = new System.Drawing.Point(1415, 597);
+            this.AdressInput.Name = "AdressInput";
+            this.AdressInput.Size = new System.Drawing.Size(100, 26);
+            this.AdressInput.TabIndex = 12;
             // 
-            // textBox_adress
+            // TVAInput
             // 
-            this.textBox_adress.Location = new System.Drawing.Point(1004, 281);
-            this.textBox_adress.Name = "textBox_adress";
-            this.textBox_adress.Size = new System.Drawing.Size(100, 26);
-            this.textBox_adress.TabIndex = 12;
+            this.TVAInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.TVAInput.Location = new System.Drawing.Point(1415, 550);
+            this.TVAInput.Name = "TVAInput";
+            this.TVAInput.Size = new System.Drawing.Size(100, 26);
+            this.TVAInput.TabIndex = 13;
             // 
-            // textBox_TVA
+            // YourShoppingCart
             // 
-            this.textBox_TVA.Location = new System.Drawing.Point(1004, 324);
-            this.textBox_TVA.Name = "textBox_TVA";
-            this.textBox_TVA.Size = new System.Drawing.Size(100, 26);
-            this.textBox_TVA.TabIndex = 13;
+            this.YourShoppingCart.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.YourShoppingCart.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YourShoppingCart.ForeColor = System.Drawing.Color.White;
+            this.YourShoppingCart.Location = new System.Drawing.Point(620, 9);
+            this.YourShoppingCart.Name = "YourShoppingCart";
+            this.YourShoppingCart.Size = new System.Drawing.Size(392, 81);
+            this.YourShoppingCart.TabIndex = 15;
+            this.YourShoppingCart.Text = "Your shopping cart";
+            this.YourShoppingCart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(206)))), ((int)(((byte)(250)))));
+            this.panel1.Controls.Add(this.BackToTheCatalogBtn);
+            this.panel1.Controls.Add(this.YourShoppingCart);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1570, 98);
+            this.panel1.TabIndex = 15;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(193, 47);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1332, 10);
+            this.panel2.TabIndex = 15;
+            // 
+            // BoveloLogoPanel
+            // 
+            this.BoveloLogoPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BoveloLogoPanel.BackgroundImage")));
+            this.BoveloLogoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BoveloLogoPanel.Location = new System.Drawing.Point(30, 127);
+            this.BoveloLogoPanel.Name = "BoveloLogoPanel";
+            this.BoveloLogoPanel.Size = new System.Drawing.Size(296, 192);
+            this.BoveloLogoPanel.TabIndex = 16;
+            // 
+            // MountainImagePanel
+            // 
+            this.MountainImagePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.MountainImagePanel.BackgroundImage = global::bov.Properties.Resources.mountain;
+            this.MountainImagePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MountainImagePanel.Location = new System.Drawing.Point(579, 499);
+            this.MountainImagePanel.Name = "MountainImagePanel";
+            this.MountainImagePanel.Size = new System.Drawing.Size(663, 433);
+            this.MountainImagePanel.TabIndex = 17;
+            // 
+            // BackToTheCatalogBtn
+            // 
+            this.BackToTheCatalogBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BackToTheCatalogBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BackToTheCatalogBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BackToTheCatalogBtn.BorderRadius = 20;
+            this.BackToTheCatalogBtn.BorderSize = 0;
+            this.BackToTheCatalogBtn.FlatAppearance.BorderSize = 0;
+            this.BackToTheCatalogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackToTheCatalogBtn.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackToTheCatalogBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackToTheCatalogBtn.Location = new System.Drawing.Point(12, 9);
+            this.BackToTheCatalogBtn.Name = "BackToTheCatalogBtn";
+            this.BackToTheCatalogBtn.Size = new System.Drawing.Size(163, 81);
+            this.BackToTheCatalogBtn.TabIndex = 18;
+            this.BackToTheCatalogBtn.Text = "Back to the catalog";
+            this.BackToTheCatalogBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackToTheCatalogBtn.UseVisualStyleBackColor = false;
+            this.BackToTheCatalogBtn.Click += new System.EventHandler(this.BackToTheCatalogBtn_Click);
+            // 
+            // SubmitPurchaseBtn
+            // 
+            this.SubmitPurchaseBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SubmitPurchaseBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.SubmitPurchaseBtn.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SubmitPurchaseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubmitPurchaseBtn.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SubmitPurchaseBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.SubmitPurchaseBtn.Location = new System.Drawing.Point(1346, 690);
+            this.SubmitPurchaseBtn.Name = "SubmitPurchaseBtn";
+            this.SubmitPurchaseBtn.Size = new System.Drawing.Size(179, 86);
+            this.SubmitPurchaseBtn.TabIndex = 18;
+            this.SubmitPurchaseBtn.Text = "Confirm the order";
+            this.SubmitPurchaseBtn.UseVisualStyleBackColor = false;
+            this.SubmitPurchaseBtn.Click += new System.EventHandler(this.SubmitPurchaseBtn_Click);
             // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1728, 787);
-            this.Controls.Add(this.submitPurchase);
-            this.Controls.Add(this.totalCost);
-            this.Controls.Add(this.deliveryDate);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox_TVA);
-            this.Controls.Add(this.textBox_adress);
-            this.Controls.Add(this.textBox_firstname);
-            this.Controls.Add(this.label_TVA);
-            this.Controls.Add(this.label_adress);
-            this.Controls.Add(this.label_firstname);
-            this.Controls.Add(this.label_lastname);
+            this.ClientSize = new System.Drawing.Size(1570, 813);
+            this.Controls.Add(this.SubmitPurchaseBtn);
+            this.Controls.Add(this.BoveloLogoPanel);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.IndicationForCustomer);
+            this.Controls.Add(this.TotalCostDisplay);
+            this.Controls.Add(this.EstimativeDeliveryDateDisplay);
+            this.Controls.Add(this.TotalPrice);
+            this.Controls.Add(this.EstimativeDeliveryDate);
+            this.Controls.Add(this.TVAInput);
+            this.Controls.Add(this.AdressInput);
+            this.Controls.Add(this.FirstnameInput);
+            this.Controls.Add(this.TVA);
+            this.Controls.Add(this.Adress);
+            this.Controls.Add(this.Firstname);
             this.Controls.Add(this.Lastname);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LastnameInput);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.MountainImagePanel);
             this.Name = "Cart";
             this.Text = "Cart";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Cart_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem deleteThisOrderLineToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox deliveryDate;
-        private System.Windows.Forms.TextBox totalCost;
-        private System.Windows.Forms.Button submitPurchase;
-
-        private System.Windows.Forms.TextBox Lastname;
-        private System.Windows.Forms.Label label_lastname;
-        private System.Windows.Forms.Label label_firstname;
-        private System.Windows.Forms.Label label_adress;
-        private System.Windows.Forms.Label label_TVA;
-        private System.Windows.Forms.TextBox textBox_firstname;
-        private System.Windows.Forms.TextBox textBox_adress;
-        private System.Windows.Forms.TextBox textBox_TVA;
-
+        private System.Windows.Forms.Label EstimativeDeliveryDate;
+        private System.Windows.Forms.Label TotalPrice;
+        private System.Windows.Forms.TextBox EstimativeDeliveryDateDisplay;
+        private System.Windows.Forms.TextBox TotalCostDisplay;
+        private System.Windows.Forms.Label IndicationForCustomer;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox LastnameInput;
+        private System.Windows.Forms.Label Lastname;
+        private System.Windows.Forms.Label Firstname;
+        private System.Windows.Forms.Label Adress;
+        private System.Windows.Forms.Label TVA;
+        private System.Windows.Forms.TextBox FirstnameInput;
+        private System.Windows.Forms.TextBox AdressInput;
+        private System.Windows.Forms.TextBox TVAInput;
+        private System.Windows.Forms.Label YourShoppingCart;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel BoveloLogoPanel;
+        private System.Windows.Forms.Panel MountainImagePanel;
+        private classes.RoundButton BackToTheCatalogBtn;
+        private System.Windows.Forms.Button SubmitPurchaseBtn;
     }
 }

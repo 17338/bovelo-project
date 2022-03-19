@@ -16,19 +16,18 @@ namespace Bovelo
         public Login()
         {
             InitializeComponent();
-            textBox1.Text = "Admin";
-            textBox2.PasswordChar = '*';
+            UsernameInput.Text = "Admin";
+            PasswordInput.PasswordChar = '*';
 
 
         }
 
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void SignInButton_Click(object sender, EventArgs e)
         {
-            var username = textBox1.Text;
-            var password = textBox2.Text;
+            var username = UsernameInput.Text;
+            var password = PasswordInput.Text;
             MySqlConnection connect = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
-            string query = "Select * from user Where UserName = '" + textBox1.Text.Trim() + "' and Password = '" + textBox2.Text.Trim() + "'";
+            string query = "Select * from user Where UserName = '" + username.Trim() + "' and Password = '" + password.Trim() + "'";
             MySqlDataAdapter sda = new MySqlDataAdapter(query, connect);
             DataTable dtbl = new DataTable();
             sda.Fill(dtbl);
@@ -41,9 +40,9 @@ namespace Bovelo
             }
             else
             {
-                MessageBox.Show("Check your username and password");
+                LoginErrorMsg loginError = new LoginErrorMsg();
+                loginError.Show();
             }
         }
-
     }
 }

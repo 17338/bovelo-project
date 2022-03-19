@@ -29,6 +29,11 @@ namespace bov
             new_catalog.Show();
         }
 
-      
+        private void BackToTheCatalogBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Catalog new_catalog = new Catalog();
+            new_catalog.Show();
+        }
     }
 }
