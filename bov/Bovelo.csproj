@@ -187,6 +187,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin\UserSetting.Designer.cs" />
+    <Compile Include="Schedule\DoSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schedule\DoSchedule.Designer.cs">
+      <DependentUpon>DoSchedule.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +240,9 @@
       <DependentUpon>PurchaseConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\UserSetting.resx" />
+    <EmbeddedResource Include="Schedule\DoSchedule.resx">
+      <DependentUpon>DoSchedule.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

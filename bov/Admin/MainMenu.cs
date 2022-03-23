@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using bov;
-
+using bov.Schedule;
 
 namespace Bovelo
 {
@@ -31,6 +31,13 @@ namespace Bovelo
             UserSetting userSetting = new UserSetting();
             this.Hide();
             userSetting.Show();
+        }
+
+        private void Planning_Click(object sender, EventArgs e)
+        {
+            DoSchedule doScheddule = new DoSchedule();
+            this.Close();
+            doScheddule.Show();
         }
     }
 }

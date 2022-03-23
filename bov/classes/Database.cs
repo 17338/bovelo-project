@@ -69,7 +69,7 @@ namespace bov.classes
             return bikeList;
         }
 
-        public void sendToDB(string query) //is used to send anything to the database
+        public void sendToDB(string query) 
         {
             //string connStr = "server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo";
             MySqlConnection conn = new MySqlConnection(connStr);
@@ -91,7 +91,7 @@ namespace bov.classes
             return getfromdbbyquery(queryOB);
         }
 
-        public void AddCustomerInDb(Customer customer) //is used to pass a new order  HAVE TO CHANGE
+        public void AddCustomerInDb(Customer customer) 
         {
             if (getIdCustomer(customer).Count() ==0 )
             { 
@@ -107,7 +107,7 @@ namespace bov.classes
 
         
 
-        public void AddOrderInDb(Order order) //is used to pass a new order  HAVE TO CHANGE
+        public void AddOrderInDb(Order order) 
         {
             Console.WriteLine(getIdCustomer(order.customer)[0][0]);
                 string queryOB = "INSERT INTO bovelo.order (date,deliveryEstimateDate,totalPrice,status,customer_idcustomer) VALUES ('"
