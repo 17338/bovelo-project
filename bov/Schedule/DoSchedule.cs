@@ -54,7 +54,7 @@ namespace bov.Schedule
                     "INNER JOIN  bovelo.modelbike as m ON b.modelbike_idmodelbike = m.idmodelbike " +
                     "INNER JOIN bovelo.orderline as o ON b.orderline_idorderline = o.idorderLine " +
                     "INNER JOIN bovelo.order as ord ON o.order_idorder = ord.idorder " +
-                    "WHERE b.status = 0  AND b.idbikes not in (select idbike from bovelo.schedule) " +
+                    "WHERE b.status = 0  AND b.idbikes not in (select bike_id from bovelo.schedule) " +
                     "ORDER BY b.idbikes " +
                     "LIMIT " + total + ";");
 
@@ -95,13 +95,15 @@ namespace bov.Schedule
                                      MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
+                
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
 
-                    string adddb = "INSERT INTO bovelo.schedule (idbike, worker, dayoftheweek) " +
+                    Console.WriteLine(database.getfromdbbyquery("SELECT id FROM bovelo.user WHERE UserName = '" + row.Cells[5].Value + "';")[0][0]);
+                    string adddb = "INSERT INTO bovelo.schedule (bike_id, user_id, week) " +
                    "VALUES ( " +
                      row.Cells[0].Value + ", '" +
-                     row.Cells[5].Value + "', '" +
+                     database.getfromdbbyquery("SELECT id FROM bovelo.user WHERE UserName = '" + row.Cells[5].Value + "';")[0][0] + "', '" +
                      dateTimePicker1.Value.ToString("yyyy-M-dd") + "'); ";
                     database.sendToDB(adddb);
                 }
