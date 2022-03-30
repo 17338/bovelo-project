@@ -193,6 +193,12 @@
     <Compile Include="Schedule\DoSchedule.Designer.cs">
       <DependentUpon>DoSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock\Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\Stock.Designer.cs">
+      <DependentUpon>Stock.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\AddUser.resx">
       <DependentUpon>AddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +248,9 @@
     <EmbeddedResource Include="Admin\UserSetting.resx" />
     <EmbeddedResource Include="Schedule\DoSchedule.resx">
       <DependentUpon>DoSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\Stock.resx">
+      <DependentUpon>Stock.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

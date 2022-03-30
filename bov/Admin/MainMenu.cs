@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using bov;
 using bov.Schedule;
+using bov.Stock;
 
 namespace Bovelo
 {
@@ -38,6 +39,13 @@ namespace Bovelo
             DoSchedule doScheddule = new DoSchedule();
             this.Close();
             doScheddule.Show();
+        }
+
+        private void Stock_Click(object sender, EventArgs e)
+        {
+            Stock stock = new Stock();
+            this.Hide();
+            stock.Show();
         }
     }
 }
