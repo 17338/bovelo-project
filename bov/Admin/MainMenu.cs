@@ -32,5 +32,12 @@ namespace Bovelo
             this.Hide();
             catalog.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            workerschedule workerschedule = new workerschedule();
+            this.Hide();
+            workerschedule.Show();
+        }
     }
 }
