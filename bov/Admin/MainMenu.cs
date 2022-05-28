@@ -47,5 +47,13 @@ namespace Bovelo
             this.Hide();
             stock.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)//ORDER PARTS
+        {
+            OrderParts orderParts = new OrderParts();
+            this.Hide();
+            orderParts.Show();
+
+        }
     }
 }
