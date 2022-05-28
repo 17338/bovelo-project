@@ -47,7 +47,7 @@ namespace bov.Stock
             using (MySqlConnection mysqlCon = new MySqlConnection(connStr))
             {
                 mysqlCon.Open();
-                MySqlDataAdapter sqlDa = new MySqlDataAdapter("PartViewAll", mysqlCon);
+                MySqlDataAdapter sqlDa = new MySqlDataAdapter("PartViewStock", mysqlCon);
                 sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
                 DataTable dt = new DataTable();
                 sqlDa.Fill(dt);
@@ -64,7 +64,7 @@ namespace bov.Stock
 
         void Clear()
         {
-            NameInput.Text = QuantityInput.Text = LocationInput.Text = ColorInput.Text = SizeInput.Text = "";
+            IDInput.Text=NameInput.Text = QuantityInput.Text = LocationInput.Text = ColorInput.Text = SizeInput.Text = "";
             idpart = 0;
             SaveBtn.Text = "Save";
             DeleteBtn.Enabled = false;
@@ -119,5 +119,7 @@ namespace bov.Stock
                 MessageBox.Show("Deleted Successfully");
             }
         }
+
+       
     }
 }

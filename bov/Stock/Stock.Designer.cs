@@ -45,13 +45,15 @@ namespace bov.Stock
             this.SearchBtn = new System.Windows.Forms.Button();
             this.SearchInput = new System.Windows.Forms.MaskedTextBox();
             this.StockView = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.IDInput = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.StockView)).BeginInit();
             this.SuspendLayout();
             // 
             // PartName
             // 
             this.PartName.AutoSize = true;
-            this.PartName.Location = new System.Drawing.Point(166, 70);
+            this.PartName.Location = new System.Drawing.Point(128, 127);
             this.PartName.Name = "PartName";
             this.PartName.Size = new System.Drawing.Size(59, 20);
             this.PartName.TabIndex = 0;
@@ -59,14 +61,14 @@ namespace bov.Stock
             // 
             // NameInput
             // 
-            this.NameInput.Location = new System.Drawing.Point(240, 67);
+            this.NameInput.Location = new System.Drawing.Point(202, 124);
             this.NameInput.Name = "NameInput";
             this.NameInput.Size = new System.Drawing.Size(100, 26);
             this.NameInput.TabIndex = 1;
             // 
             // ColorInput
             // 
-            this.ColorInput.Location = new System.Drawing.Point(240, 158);
+            this.ColorInput.Location = new System.Drawing.Point(202, 215);
             this.ColorInput.Name = "ColorInput";
             this.ColorInput.Size = new System.Drawing.Size(100, 26);
             this.ColorInput.TabIndex = 3;
@@ -74,7 +76,7 @@ namespace bov.Stock
             // Color
             // 
             this.Color.AutoSize = true;
-            this.Color.Location = new System.Drawing.Point(166, 161);
+            this.Color.Location = new System.Drawing.Point(128, 218);
             this.Color.Name = "Color";
             this.Color.Size = new System.Drawing.Size(54, 20);
             this.Color.TabIndex = 2;
@@ -82,7 +84,7 @@ namespace bov.Stock
             // 
             // SizeInput
             // 
-            this.SizeInput.Location = new System.Drawing.Point(240, 262);
+            this.SizeInput.Location = new System.Drawing.Point(202, 319);
             this.SizeInput.Name = "SizeInput";
             this.SizeInput.Size = new System.Drawing.Size(100, 26);
             this.SizeInput.TabIndex = 5;
@@ -90,7 +92,7 @@ namespace bov.Stock
             // Size
             // 
             this.Size.AutoSize = true;
-            this.Size.Location = new System.Drawing.Point(166, 265);
+            this.Size.Location = new System.Drawing.Point(128, 322);
             this.Size.Name = "Size";
             this.Size.Size = new System.Drawing.Size(48, 20);
             this.Size.TabIndex = 4;
@@ -98,7 +100,7 @@ namespace bov.Stock
             // 
             // QuantityInput
             // 
-            this.QuantityInput.Location = new System.Drawing.Point(240, 372);
+            this.QuantityInput.Location = new System.Drawing.Point(202, 429);
             this.QuantityInput.Name = "QuantityInput";
             this.QuantityInput.Size = new System.Drawing.Size(100, 26);
             this.QuantityInput.TabIndex = 7;
@@ -106,7 +108,7 @@ namespace bov.Stock
             // Quantity
             // 
             this.Quantity.AutoSize = true;
-            this.Quantity.Location = new System.Drawing.Point(166, 375);
+            this.Quantity.Location = new System.Drawing.Point(128, 432);
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(76, 20);
             this.Quantity.TabIndex = 6;
@@ -114,7 +116,7 @@ namespace bov.Stock
             // 
             // LocationInput
             // 
-            this.LocationInput.Location = new System.Drawing.Point(240, 476);
+            this.LocationInput.Location = new System.Drawing.Point(202, 533);
             this.LocationInput.Name = "LocationInput";
             this.LocationInput.Size = new System.Drawing.Size(100, 26);
             this.LocationInput.TabIndex = 9;
@@ -122,7 +124,7 @@ namespace bov.Stock
             // Location
             // 
             this.Location.AutoSize = true;
-            this.Location.Location = new System.Drawing.Point(166, 479);
+            this.Location.Location = new System.Drawing.Point(128, 536);
             this.Location.Name = "Location";
             this.Location.Size = new System.Drawing.Size(78, 20);
             this.Location.TabIndex = 8;
@@ -189,11 +191,29 @@ namespace bov.Stock
             this.StockView.TabIndex = 15;
             this.StockView.DoubleClick += new System.EventHandler(this.StockView_DoubleClick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(128, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 20);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "ID :";
+            // 
+            // IDInput
+            // 
+            this.IDInput.Location = new System.Drawing.Point(202, 28);
+            this.IDInput.Name = "IDInput";
+            this.IDInput.Size = new System.Drawing.Size(100, 26);
+            this.IDInput.TabIndex = 17;
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1603, 805);
+            this.Controls.Add(this.IDInput);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.StockView);
             this.Controls.Add(this.SearchInput);
             this.Controls.Add(this.SearchBtn);
@@ -238,5 +258,7 @@ namespace bov.Stock
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.MaskedTextBox SearchInput;
         private System.Windows.Forms.DataGridView StockView;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MaskedTextBox IDInput;
     }
 }

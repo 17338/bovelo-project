@@ -138,6 +138,11 @@ namespace bov.classes
             sendToDB(queryOB);
         }
 
+        public void AddPartLineInDb(Part part)
+        {
+            int index = getfromdb("bovelo.orderline").Count - 1;
+        }
+
         public void AddBikeInDb(Bike bike)
         {
 
@@ -151,6 +156,9 @@ namespace bov.classes
 
             sendToDB(queryOB);
         }
+
+
+
 
 
     }

@@ -104,6 +104,8 @@
     <Compile Include="Admin\AddUser.Designer.cs">
       <DependentUpon>AddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\OrderPart.cs" />
+    <Compile Include="Classes\Part.cs" />
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -193,6 +195,12 @@
     <Compile Include="Schedule\DoSchedule.Designer.cs">
       <DependentUpon>DoSchedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Stock\OrderParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\OrderParts.Designer.cs">
+      <DependentUpon>OrderParts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stock\Stock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +256,9 @@
     <EmbeddedResource Include="Admin\UserSetting.resx" />
     <EmbeddedResource Include="Schedule\DoSchedule.resx">
       <DependentUpon>DoSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\OrderParts.resx">
+      <DependentUpon>OrderParts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock\Stock.resx">
       <DependentUpon>Stock.cs</DependentUpon>
