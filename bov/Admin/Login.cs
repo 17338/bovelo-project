@@ -26,7 +26,7 @@ namespace Bovelo
         {
             var username = UsernameInput.Text;
             var password = PasswordInput.Text;
-            MySqlConnection connect = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
+            MySqlConnection connect = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
             string query = "Select * from user Where UserName = '" + username.Trim() + "' and Password = '" + password.Trim() + "'";
             MySqlDataAdapter sda = new MySqlDataAdapter(query, connect);
             DataTable dtbl = new DataTable();
