@@ -259,3 +259,4 @@ C:\Users\anoua\OneDrive\Bureau\SE2_Vfin\bov\obj\Debug\Bovelo.csproj.CoreCompileI
 C:\Users\anoua\OneDrive\Bureau\SE2_Vfin\bov\obj\Debug\Bovelo.csproj.CopyComplete
 C:\Users\anoua\OneDrive\Bureau\SE2_Vfin\bov\obj\Debug\bov.exe
 C:\Users\anoua\OneDrive\Bureau\SE2_Vfin\bov\obj\Debug\bov.pdb
+C:\Users\anoua\OneDrive\Bureau\SE2_Vfin\bov\obj\Debug\bov.Schedule.WorkerSchedule.resources
