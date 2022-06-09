@@ -123,5 +123,10 @@ namespace bov.Schedule
             MainMenu mainMenu = new MainMenu();
             this.Hide();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

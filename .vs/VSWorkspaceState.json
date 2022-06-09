@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\bov",
-    "\\bov\\Classes",
-    "\\bov\\Sale"
+    ""
   ],
-  "SelectedNode": "\\bov\\Classes\\OrderLine.cs",
+  "SelectedNode": "\\bov.sln",
   "PreviewInSolutionExplorer": false
 }
