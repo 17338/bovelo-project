@@ -36,18 +36,41 @@ namespace bov.Schedule
                 oReader.Close();
             }
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+
+
+
+
+
+
+
+
+
+        private void contextMenuStrip2_Opening(object sender, CancelEventArgs e)
+        {
 
         }
 
-        Database database = new Database();
+        
 
 
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
+
+
+
+
+
+
+            
+        }
+
+        private void OK_Click(object sender, EventArgs e)
+        {
+           
 
             MySqlConnection myDbConn = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
             string selectinfo = "Select bike_id from schedule inner join bovelo.user as u on user_id = u.id  where u.UserName= '" + comboBox1.SelectedItem + "' AND week LIKE '" + dateTimePicker1.Text + "';";
@@ -58,6 +81,12 @@ namespace bov.Schedule
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
+
+
+
+
+
+
             for (int i = 0; i < dataGridView1.RowCount; i++)
             {
                 string selectmodel = "Select modelbike_idmodelbike from bikes  where idbikes = '" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "';";
@@ -65,34 +94,24 @@ namespace bov.Schedule
                 MySqlCommand cmd2 = new MySqlCommand(selectmodel, myDbConn);
                 cmd2.CommandType = CommandType.Text;
                 MySqlDataAdapter sda2 = new MySqlDataAdapter(cmd2);
-                sda2.Fill(dt);
+                //DataColumn model = new DataColumn("model");
+                //model.AllowDBNull = true;
+                dt.Columns.Add("bikemodel");
+                foreach (DataRow row in dt.Rows)
+                {
+                    row["bikemodel"] = sda2;
+                    dataGridView1.DataSource = dt;
+                }
+
             }
 
 
+
+
             myDbConn.Close();
-
-
-
-
-
-
-
-
-
-
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contextMenuStrip2_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
@@ -113,25 +132,19 @@ namespace bov.Schedule
             }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-
-
-
-
-
-            
         }
     }
 }
