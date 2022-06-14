@@ -49,6 +49,7 @@ namespace bov.Schedule
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // panel1
             // 
@@ -120,7 +121,7 @@ namespace bov.Schedule
             this.button1.Text = "save";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // WorkerSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -128,7 +129,7 @@ namespace bov.Schedule
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
-            this.Name = "Form1";
+            this.Name = "WorkerSchedule";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -17,6 +17,24 @@ namespace bov.Schedule
         public WorkerSchedule()
         {
             InitializeComponent();
+            MySqlConnection myDbConn = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
+            string WORKERSRECUP = "SELECT Name FROM bovelo.user WHERE job = 'Assembly worker';";
+            myDbConn.Open();
+            MySqlCommand cmd = new MySqlCommand(WORKERSRECUP, myDbConn);
+            cmd.CommandType = CommandType.Text;
+            MySqlDataReader oReader = cmd.ExecuteReader();
+
+            try
+            {
+                while (oReader.Read())
+                {
+                    comboBox1.Items.Add(oReader.GetValue(0).ToString());
+                }
+            }
+            finally
+            {
+                oReader.Close();
+            }
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -26,18 +44,7 @@ namespace bov.Schedule
 
         Database database = new Database();
 
-        private void workerschedule_Load(object sender, EventArgs e)
-        {
 
-            List<List<string>> workers = database.getfromdbbyquery("SELECT * FROM bovelo.user WHERE job = 'Assembly worker';");
-            foreach (List<string> worker in workers)
-            {
-                comboBox1.Items.Add(worker[3]);
-            }
-
-
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -114,6 +121,17 @@ namespace bov.Schedule
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+            
         }
     }
 }
