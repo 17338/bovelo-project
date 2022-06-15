@@ -48,13 +48,7 @@ namespace Bovelo
             stock.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)//ORDER PARTS
-        {
-            OrderParts orderParts = new OrderParts();
-            this.Hide();
-            orderParts.Show();
 
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -62,5 +56,14 @@ namespace Bovelo
             this.Hide();
             WorkerSchedule.Show();
         }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+            OrderParts orderParts = new OrderParts();
+            this.Hide();
+            orderParts.Show();
+
+        }   
     }
 }

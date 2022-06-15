@@ -41,8 +41,8 @@ namespace Bovelo
             this.UserSettings = new System.Windows.Forms.Label();
             this.Planning = new System.Windows.Forms.Label();
             this.Stock = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,10 +100,10 @@ namespace Bovelo
             this.CyclistImagePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CyclistImagePanel.BackgroundImage = global::bov.Properties.Resources.cyclist;
             this.CyclistImagePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.CyclistImagePanel.Location = new System.Drawing.Point(800, 332);
+            this.CyclistImagePanel.Location = new System.Drawing.Point(992, 427);
             this.CyclistImagePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CyclistImagePanel.Name = "CyclistImagePanel";
-            this.CyclistImagePanel.Size = new System.Drawing.Size(585, 374);
+            this.CyclistImagePanel.Size = new System.Drawing.Size(393, 279);
             this.CyclistImagePanel.TabIndex = 31;
             // 
             // Cyclist1ImagePanel
@@ -111,7 +111,7 @@ namespace Bovelo
             this.Cyclist1ImagePanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Cyclist1ImagePanel.BackgroundImage = global::bov.Properties.Resources.cyclist1;
             this.Cyclist1ImagePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Cyclist1ImagePanel.Location = new System.Drawing.Point(186, 389);
+            this.Cyclist1ImagePanel.Location = new System.Drawing.Point(0, 427);
             this.Cyclist1ImagePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cyclist1ImagePanel.Name = "Cyclist1ImagePanel";
             this.Cyclist1ImagePanel.Size = new System.Drawing.Size(355, 259);
@@ -121,7 +121,7 @@ namespace Bovelo
             // 
             this.BoveloLogoPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BoveloLogoPanel.BackgroundImage")));
             this.BoveloLogoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BoveloLogoPanel.Location = new System.Drawing.Point(43, 131);
+            this.BoveloLogoPanel.Location = new System.Drawing.Point(16, 131);
             this.BoveloLogoPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BoveloLogoPanel.Name = "BoveloLogoPanel";
             this.BoveloLogoPanel.Size = new System.Drawing.Size(263, 154);
@@ -133,7 +133,7 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Catalog.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Catalog.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Catalog.Location = new System.Drawing.Point(562, 272);
+            this.Catalog.Location = new System.Drawing.Point(697, 277);
             this.Catalog.Name = "Catalog";
             this.Catalog.Size = new System.Drawing.Size(232, 42);
             this.Catalog.TabIndex = 33;
@@ -148,7 +148,7 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UserSettings.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserSettings.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.UserSettings.Location = new System.Drawing.Point(511, 314);
+            this.UserSettings.Location = new System.Drawing.Point(1003, 279);
             this.UserSettings.Name = "UserSettings";
             this.UserSettings.Size = new System.Drawing.Size(315, 40);
             this.UserSettings.TabIndex = 34;
@@ -163,7 +163,7 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Planning.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Planning.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Planning.Location = new System.Drawing.Point(566, 354);
+            this.Planning.Location = new System.Drawing.Point(351, 277);
             this.Planning.Name = "Planning";
             this.Planning.Size = new System.Drawing.Size(228, 42);
             this.Planning.TabIndex = 35;
@@ -178,23 +178,13 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Stock.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Stock.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Stock.Location = new System.Drawing.Point(566, 447);
+            this.Stock.Location = new System.Drawing.Point(727, 361);
             this.Stock.Name = "Stock";
-            this.Stock.Size = new System.Drawing.Size(228, 42);
+            this.Stock.Size = new System.Drawing.Size(89, 42);
             this.Stock.TabIndex = 36;
             this.Stock.Text = "STOCK";
             this.Stock.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Stock.Click += new System.EventHandler(this.Stock_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(627, 489);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 17);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "ORDER PARTS";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -203,13 +193,28 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(566, 405);
+            this.label2.Location = new System.Drawing.Point(382, 361);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 42);
+            this.label2.Size = new System.Drawing.Size(251, 42);
             this.label2.TabIndex = 38;
             this.label2.Text = "PLANNING WORKER";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(962, 361);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(215, 42);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "ORDER PARTS";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // MainMenu
             // 
@@ -217,8 +222,8 @@ namespace Bovelo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1377, 677);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.Stock);
             this.Controls.Add(this.Planning);
             this.Controls.Add(this.Catalog);
@@ -234,7 +239,6 @@ namespace Bovelo
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -250,7 +254,7 @@ namespace Bovelo
         private System.Windows.Forms.Label UserSettings;
         private System.Windows.Forms.Label Planning;
         private System.Windows.Forms.Label Stock;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
