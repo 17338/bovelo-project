@@ -9,12 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MainMenu = Bovelo.MainMenu;
 
 namespace bov
 {
 
-    public partial class Catalog : Form
+    public partial class TheCatalog : Form
     {
         OrderLine orderLine;
         CatalogShop catalogShop = new CatalogShop();
@@ -26,7 +26,7 @@ namespace bov
         //string path = @"C:\\Users\\Tafita\\Downloads\\bovelo-project-main\\bov\\";
 
 
-        public Catalog()
+        public TheCatalog()
         {
 
             InitializeComponent();
@@ -195,7 +195,12 @@ namespace bov
             frm3.Show();
         }
 
-      
+        private void BackToTheMainMenuBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MainMenu mainmenu = new MainMenu();
+            mainmenu.Show();
+        }
     }
 
     }

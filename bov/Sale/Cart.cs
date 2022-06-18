@@ -13,10 +13,10 @@ namespace bov
 {
     public partial class Cart : Form
     {
-        Catalog catalog;
+        TheCatalog catalog;
         Order order;
         private int rowIndex = 0;
-        public Cart(Order order, Catalog catalog)
+        public Cart(Order order, TheCatalog catalog)
         {
             InitializeComponent();
 

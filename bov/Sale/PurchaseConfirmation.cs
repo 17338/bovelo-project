@@ -13,8 +13,8 @@ namespace bov
 {
     public partial class PurchaseConfirmation : Form
     {
-        Catalog catalog;
-        public PurchaseConfirmation(Catalog catalog)
+        TheCatalog catalog;
+        public PurchaseConfirmation(TheCatalog catalog)
         {
             InitializeComponent();
             
@@ -25,14 +25,14 @@ namespace bov
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Catalog new_catalog = new Catalog();
+            TheCatalog new_catalog = new TheCatalog();
             new_catalog.Show();
         }
 
         private void BackToTheCatalogBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            Catalog new_catalog = new Catalog();
+            TheCatalog new_catalog = new TheCatalog();
             new_catalog.Show();
         }
     }

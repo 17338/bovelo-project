@@ -13,11 +13,11 @@ namespace bov
 {
     public partial class Description : Form
     {
-        Catalog catalog;
+        TheCatalog catalog;
         BikeModel bikeModel;
         string path = @"C:\\Users\\zakbu\\OneDrive\\Documents\\GitHub\\bovelo-project\\bov\\";
         //string path = @"C:\\Users\\Tafita\\Downloads\\bovelo-project-main\\bov\\";
-        public Description(BikeModel bikeModel, Catalog catalog)
+        public Description(BikeModel bikeModel, TheCatalog catalog)
         {
             InitializeComponent();
             this.catalog = catalog;
