@@ -51,7 +51,7 @@ namespace bov.Schedule
 
         }
 
-        
+
 
 
 
@@ -65,61 +65,66 @@ namespace bov.Schedule
 
 
 
-            
+
         }
 
         private void OK_Click(object sender, EventArgs e)
         {
-           
+            Database database = new Database();
 
-            MySqlConnection myDbConn = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
-            string selectinfo = "Select bike_id from schedule inner join bovelo.user as u on user_id = u.id  where u.UserName= '" + comboBox1.SelectedItem + "' AND week LIKE '" + dateTimePicker1.Text + "';";
-            myDbConn.Open();
-            MySqlCommand cmd = new MySqlCommand(selectinfo, myDbConn);
-            cmd.CommandType = CommandType.Text;
-            MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView1.DataSource = dt;
+            List<List<string>> bikes = database.getfromdbbyquery("Select bike_id from schedule inner join bovelo.user as u on user_id = u.id  where u.UserName= '" + comboBox1.SelectedItem + "' AND week LIKE '" + dateTimePicker1.Text + "';");
 
 
+            //MySqlConnection myDbConn = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
+            //string selectinfo = "Select bike_id from schedule inner join bovelo.user as u on user_id = u.id  where u.UserName= '" + comboBox1.SelectedItem + "' AND week LIKE '" + dateTimePicker1.Text + "';";
 
-
-
-
-            for (int i = 0; i < dataGridView1.RowCount; i++)
+            //myDbConn.Open();
+            //MySqlCommand cmd = new MySqlCommand(selectinfo, myDbConn);
+            //cmd.CommandType = CommandType.Text;
+            //MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //dataGridView1.DataSource = dt;
+            dataGridView1.ColumnCount = 2;
+            dataGridView1.Columns[0].Name = "bikeid";
+            dataGridView1.Columns[1].Name = "model";
+            foreach (List<string> elem in bikes)
             {
-                string selectmodel = "Select modelbike_idmodelbike from bikes  where idbikes = '" + dataGridView1.Rows[i].Cells[1].Value.ToString() + "';";
-
-                MySqlCommand cmd2 = new MySqlCommand(selectmodel, myDbConn);
-                cmd2.CommandType = CommandType.Text;
-                MySqlDataAdapter sda2 = new MySqlDataAdapter(cmd2);
-                //DataColumn model = new DataColumn("model");
-                //model.AllowDBNull = true;
-                dt.Columns.Add("bikemodel");
-                foreach (DataRow row in dt.Rows)
+                List<List<string>> model = database.getfromdbbyquery("Select modelbike_idmodelbike from bikes  where idbikes = '" + elem[0] + "';");
+                foreach (List<string> el in model)
                 {
-                    row["bikemodel"] = sda2;
-                    dataGridView1.DataSource = dt;
+                    string[] row = new string[] { elem[0], el[0] };
+                    dataGridView1.Rows.Add(row);
+
                 }
 
             }
 
+            DataGridViewCheckBoxColumn dgvCmba = new DataGridViewCheckBoxColumn();
+            dgvCmba.Name = "ckeck";
+            dataGridView1.Columns.Add(dgvCmba);
 
 
 
-            myDbConn.Close();
+
+
+
+
+
+
+
+            //myDbConn.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                bool s = Convert.ToBoolean(row.Cells[0].Value);
+                bool s = Convert.ToBoolean(row.Cells[2].Value);
 
                 if (s == true)
                 {
-                    string updatestatus = "UPDATE bikes SET status='1' WHERE idbikes ='" + row.Cells[1].Value + "'";
+                    string updatestatus = "UPDATE bikes SET status='1' WHERE idbikes ='" + row.Cells[0].Value + "'";
 
 
                     MySqlConnection myDbConn = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
