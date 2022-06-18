@@ -1,4 +1,5 @@
 ﻿using bov.classes;
+using bov.Sale;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,7 +84,8 @@ namespace bov
             {
                 if (color_choice1.SelectedItem == null || size_choice1.SelectedItem == null || quantity_choice1.SelectedItem == null)
                 {
-                    MessageBox.Show("Selected a color or quantity or size please");
+                IncompleteSelection message = new IncompleteSelection();
+                message.Show();
                 }
                 else
                 {
@@ -100,7 +102,8 @@ namespace bov
                         order.CheckOrderLineExist(orderLine);
                     }
 
-                    MessageBox.Show("Order added in the cart");
+                    AddingBikeToCartMsg BikeAdded = new AddingBikeToCartMsg();
+                    BikeAdded.Show();
                 }
             }
 
@@ -108,8 +111,9 @@ namespace bov
             {
                 if (color_choice2.SelectedItem == null || size_choice2.SelectedItem == null || quantity_choice2.SelectedItem == null)
                 {
-                    MessageBox.Show("Make sure to select a color, a quantity and a size please");
-                }
+                IncompleteSelection message = new IncompleteSelection();
+                message.Show();
+            }
                 else
                 {
                     int quantity = int.Parse(quantity_choice2.SelectedItem.ToString());
@@ -125,17 +129,19 @@ namespace bov
                         order.CheckOrderLineExist(orderLine);
                     }
 
-                    MessageBox.Show("Order added in the cart");
+                        AddingBikeToCartMsg BikeAdded = new AddingBikeToCartMsg();
+                        BikeAdded.Show();
 
-                }
+            }
             }
 
             private void add_cart3_Click(object sender, EventArgs e)
             {
                 if (color_choice3.SelectedItem == null || size_choice3.SelectedItem == null || quantity_choice3.SelectedItem == null)
                 {
-                    MessageBox.Show("Selected a color or quantity or size please");
-                }
+                IncompleteSelection message = new IncompleteSelection();
+                message.Show();
+            }
                 else
                 {
 
@@ -151,8 +157,10 @@ namespace bov
                     {
                         order.CheckOrderLineExist(orderLine);
                     }
-                    MessageBox.Show("Order added in the cart");
-                }
+                    
+                    AddingBikeToCartMsg BikeAdded = new AddingBikeToCartMsg();
+                    BikeAdded.Show();
+            }
             }
 
             private void button1_Click(object sender, EventArgs e)
@@ -169,8 +177,9 @@ namespace bov
 
                 else
                 {
-                    MessageBox.Show("Your cart is empty");
-                }
+                EmptyCartMsg emptyCart = new EmptyCartMsg();
+                emptyCart.Show();
+            }
 
             }
 

@@ -109,6 +109,18 @@
     <Compile Include="RoundButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Sale\AddingBikeToCartMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\AddingBikeToCartMsg.Designer.cs">
+      <DependentUpon>AddingBikeToCartMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\IncompleteSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\IncompleteSelection.Designer.cs">
+      <DependentUpon>IncompleteSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sale\MissingCustomerMsg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,11 +231,17 @@
     <EmbeddedResource Include="Admin\LoginErrorMsg.resx">
       <DependentUpon>LoginErrorMsg.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sale\AddingBikeToCartMsg.resx">
+      <DependentUpon>AddingBikeToCartMsg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sale\Cart.resx">
       <DependentUpon>Cart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale\Catalog.resx">
       <DependentUpon>Catalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\IncompleteSelection.resx">
+      <DependentUpon>IncompleteSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sale\MissingCustomerMsg.resx">
       <DependentUpon>MissingCustomerMsg.cs</DependentUpon>
