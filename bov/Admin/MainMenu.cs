@@ -20,50 +20,58 @@ namespace Bovelo
             InitializeComponent();
         }
 
-        private void Catalog_Click(object sender, EventArgs e)
+
+
+
+
+        private void label1_Click(object sender, EventArgs e)
         {
             Catalog catalog = new Catalog();
             this.Hide();
             catalog.Show();
+
         }
 
-        private void UserSettings_Click(object sender, EventArgs e)
-        {
-            UserSetting userSetting = new UserSetting();
-            this.Hide();
-            userSetting.Show();
-        }
-
-        private void Planning_Click(object sender, EventArgs e)
-        {
-            DoSchedule doScheddule = new DoSchedule();
-            this.Close();
-            doScheddule.Show();
-        }
-
-        private void Stock_Click(object sender, EventArgs e)
-        {
-            Stock stock = new Stock();
-            this.Hide();
-            stock.Show();
-        }
-
-
-
-        private void label2_Click(object sender, EventArgs e)
+        private void label2_Click_1(object sender, EventArgs e)
         {
             WorkerSchedule WorkerSchedule = new WorkerSchedule();
             this.Hide();
             WorkerSchedule.Show();
+
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
+        {
+            DoSchedule doScheddule = new DoSchedule();
+            this.Close();
+            doScheddule.Show();
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Stock stock = new Stock();
+            this.Hide();
+            stock.Show();
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
             OrderParts orderParts = new OrderParts();
             this.Hide();
             orderParts.Show();
 
-        }   
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            UserSetting userSetting = new UserSetting();
+            this.Hide();
+            userSetting.Show();
+
+        }
     }
 }
