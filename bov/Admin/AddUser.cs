@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Bovelo
 {
@@ -17,7 +10,7 @@ namespace Bovelo
         {
             InitializeComponent();
             textBox8.PasswordChar = '*';
-            
+
         }
 
 
@@ -37,30 +30,21 @@ namespace Bovelo
             string JOB = comboBox1.Text;
             try
             {
-                MySqlConnection myDbConn = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
-                myDbConn.Open();
+                //MySqlConnection DatabaseConnexion = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
+                MySqlConnection DatabaseConnexion = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
+                DatabaseConnexion.Open();
 
                 string addinfo = "INSERT INTO user (Name, LastName, UserName, Password, Job) VALUES(@Name, @LastName, @UserName, @Password, @Job);";
-                MySqlCommand cmd = new MySqlCommand(addinfo, myDbConn);
+                MySqlCommand UserData = new MySqlCommand(addinfo, DatabaseConnexion);
 
-                cmd.Parameters.AddWithValue("@Name", NAME);
-                cmd.Parameters.AddWithValue("@LastName", LASTNAME);
-                cmd.Parameters.AddWithValue("@UserName", USERNAME);
-                cmd.Parameters.AddWithValue("@Password", PASSWORD);
-                cmd.Parameters.AddWithValue("@Job", JOB);
+                UserData.Parameters.AddWithValue("@Name", NAME);
+                UserData.Parameters.AddWithValue("@LastName", LASTNAME);
+                UserData.Parameters.AddWithValue("@UserName", USERNAME);
+                UserData.Parameters.AddWithValue("@Password", PASSWORD);
+                UserData.Parameters.AddWithValue("@Job", JOB);
 
 
-
-                //string addinfo = "INSERT INTO user (Name, Last Name, UserName, Password, Job) VALUES(?, ?, ?, ?, ?);";
-
-                //MySqlCommand cmd = new MySqlCommand(addinfo, myDbConn);
-                //cmd.Parameters.Add(new MySqlParameter("Name", Convert.ToString(NAME)));
-                //cmd.Parameters.Add(new MySqlParameter("Last Name", Convert.ToString(LASTNAME)));
-                //cmd.Parameters.Add(new MySqlParameter("UserName", Convert.ToString(USERNAME)));
-                //cmd.Parameters.Add(new MySqlParameter("Password", Convert.ToString(PASSWORD)));
-                //cmd.Parameters.Add(new MySqlParameter("Job", Convert.ToString(JOB)));
-
-                cmd.ExecuteReader();
+                UserData.ExecuteReader();
 
 
             }
@@ -71,8 +55,9 @@ namespace Bovelo
             }
             finally
             {
-                MySqlConnection myDbConn = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
-                myDbConn.Close();
+                //MySqlConnection DataBaseConnexion = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
+                MySqlConnection DataBaseConnexion = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
+                DataBaseConnexion.Close();
 
             }
 

@@ -70,7 +70,6 @@ namespace bov.Stock
             //MainMenu mainMenu = new MainMenu();
             //this.Hide();
             //mainMenu.Show();
-
         }
     }
 }

@@ -29,10 +29,10 @@ namespace Bovelo
             MySqlConnection connect = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
             string query = "Select * from user Where UserName = '" + username.Trim() + "' and Password = '" + password.Trim() + "'";
             MySqlDataAdapter sda = new MySqlDataAdapter(query, connect);
-            DataTable dtbl = new DataTable();
-            sda.Fill(dtbl);
+            DataTable LoginData = new DataTable();
+            sda.Fill(LoginData);
 
-            if (dtbl.Rows.Count == 1)
+            if (LoginData.Rows.Count == 1)
             {
                 MainMenu menu = new MainMenu();
                 this.Hide();

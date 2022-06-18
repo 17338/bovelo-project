@@ -10,14 +10,14 @@ namespace bov.classes
 {
     public class Database
     {
-        string connStr = "server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo";
+        string DataBaseConnect = "server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo";
         
         public List<List<string>> getfromdb(string DBTable)
         { 
             var listFromDB = new List<List<string>>();
         
            // string connStr = "server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo";
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(DataBaseConnect);
             conn.Open();
             string sql = "SELECT * FROM " + DBTable + ";";
             MySqlCommand cmd = new MySqlCommand(sql, conn);
@@ -40,7 +40,7 @@ namespace bov.classes
         {
             var listFromDB = new List<List<string>>();
             //string connStr = "server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo";
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection conn = new MySqlConnection(DataBaseConnect);
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, conn);
             MySqlDataReader rdr = cmd.ExecuteReader();
@@ -72,14 +72,14 @@ namespace bov.classes
         public void sendToDB(string query) 
         {
             //string connStr = "server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo";
-            MySqlConnection conn = new MySqlConnection(connStr);
+            MySqlConnection Connection = new MySqlConnection(DataBaseConnect);
             Console.WriteLine("Connecting to MySQL to send new element...");
-            conn.Open();
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            MySqlDataReader rdr = cmd.ExecuteReader();
+            Connection.Open();
+            MySqlCommand cmd = new MySqlCommand(query, Connection);
+            MySqlDataReader read = cmd.ExecuteReader();
             Console.WriteLine("Element added to DB");
-            rdr.Dispose();
-            conn.Close();
+            read.Dispose();
+            Connection.Close();
         }
 
         public List<List<string>> getIdCustomer(Customer customer)

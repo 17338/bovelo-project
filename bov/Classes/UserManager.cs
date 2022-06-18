@@ -10,10 +10,10 @@ namespace Bovelo
     {
         public static void CheckIfUserTableExists()
         {
-            MySqlConnection myDbConn = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
+            MySqlConnection DataBaseConnect = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
             try
             {
-                myDbConn.Open();
+                DataBaseConnect.Open();
 
                 string write =
                      "CREATE TABLE IF NOT EXISTS `user` (" +
@@ -24,7 +24,7 @@ namespace Bovelo
                    "`Password` varchar(250)  NOT NULL default ''," +
                    "`Job` varchar(250)  NOT NULL default ''," +
                     "PRIMARY KEY(`id`)); ";
-                MySqlCommand cmd = new MySqlCommand(write, myDbConn);
+                MySqlCommand cmd = new MySqlCommand(write, DataBaseConnect);
 
                 cmd.ExecuteNonQuery();
             }
@@ -36,7 +36,7 @@ namespace Bovelo
             finally
             {
                 // Disconnect Database
-                myDbConn.Close();
+                DataBaseConnect.Close();
             }
         }
         public static bool CheckIfNewInstallation()

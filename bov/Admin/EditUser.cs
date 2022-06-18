@@ -1,13 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Bovelo
 {
@@ -16,10 +11,11 @@ namespace Bovelo
         public EditUser()
         {
             InitializeComponent();
-            MySqlConnection myDbConn = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
-            myDbConn.Open();
+            //MySqlConnection DataBaseConnect = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
+            MySqlConnection DataBaseConnect = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
+            DataBaseConnect.Open();
             string selectinfo = "Select * from user ;";
-            MySqlCommand cmd = new MySqlCommand(selectinfo, myDbConn);
+            MySqlCommand cmd = new MySqlCommand(selectinfo, DataBaseConnect);
 
 
             cmd.CommandType = CommandType.Text;
@@ -27,10 +23,7 @@ namespace Bovelo
             DataTable dt = new DataTable();
             sda.Fill(dt);
 
-
             dataGridView1.DataSource = dt;
-
-
 
             Column1.ValueType = typeof(bool);
             Column1.Name = "Chk";
@@ -47,10 +40,11 @@ namespace Bovelo
 
         private void USERS_Click(object sender, EventArgs e)
         {
-            MySqlConnection myDbConn = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
-            myDbConn.Open();
+            //MySqlConnection DataBaseConnect = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
+            MySqlConnection DataBaseConnect = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
+            DataBaseConnect.Open();
             string selectinfo = "Select * from user ;";
-            MySqlCommand cmd = new MySqlCommand(selectinfo, myDbConn);
+            MySqlCommand cmd = new MySqlCommand(selectinfo, DataBaseConnect);
 
 
             cmd.CommandType = CommandType.Text;
@@ -81,14 +75,15 @@ namespace Bovelo
             foreach (DataGridViewRow row in toDelete)
             {
                 string del = "DELETE FROM user WHERE id=" + row.Cells[1].Value.ToString() + ";";
-                MySqlConnection myDbConn = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
+                MySqlConnection DataBaseConnect = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
+                //MySqlConnection DataBaseConnect = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
 
-                myDbConn.Open();
-                MySqlCommand cmd = new MySqlCommand(del, myDbConn);
+                DataBaseConnect.Open();
+                MySqlCommand cmd = new MySqlCommand(del, DataBaseConnect);
                 cmd.CommandType = CommandType.Text;
                 cmd.ExecuteNonQuery();
 
-                myDbConn.Close();
+                DataBaseConnect.Close();
                 dataGridView1.Rows.Remove(row);
 
             }
@@ -97,7 +92,7 @@ namespace Bovelo
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+
             List<DataGridViewRow> toEdit = new List<DataGridViewRow>();
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
@@ -111,10 +106,11 @@ namespace Bovelo
 
             foreach (DataGridViewRow row in toEdit)
             {
-                MySqlConnection myDbConn = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
-                myDbConn.Open();
+                //MySqlConnection DataBaseConnect = new MySqlConnection(@"server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306");
+                MySqlConnection DataBaseConnect = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
+                DataBaseConnect.Open();
                 string edit = "SELECT Name, LastName, UserName, Password, Job  FROM user WHERE  id=" + row.Cells[1].Value.ToString() + ";";
-                MySqlCommand cmd = new MySqlCommand(edit, myDbConn);
+                MySqlCommand cmd = new MySqlCommand(edit, DataBaseConnect);
                 cmd.CommandType = CommandType.Text;
                 MySqlDataReader sdr = cmd.ExecuteReader();
                 sdr.Read();
@@ -131,7 +127,7 @@ namespace Bovelo
                 this.Hide();
                 addUser.Show();
 
-                myDbConn.Close();
+                DataBaseConnect.Close();
 
 
             }
@@ -139,6 +135,6 @@ namespace Bovelo
 
         }
 
-       
+
     }
 }

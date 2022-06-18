@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Bovelo
 {
@@ -29,9 +22,9 @@ namespace Bovelo
         {
 
         }
-       
 
-        
+
+
 
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -44,7 +37,7 @@ namespace Bovelo
             {
                 string Password = textBox3.Text;
                 string ConfirmPasword = textBox4.Text;
-                if (Password!=null && ConfirmPasword != null && Password == ConfirmPasword)
+                if (Password != null && ConfirmPasword != null && Password == ConfirmPasword)
                 {
                     string NAME = "Admin";
                     string LASTNAME = "Admin";
@@ -53,12 +46,12 @@ namespace Bovelo
                     string JOB = "Administrator";
                     //server=127.0.0.1;userid=root;pwd=root;persistsecurityinfo=True;database=bovelo;port=3306
                     //"server=localhost;user=root;database=group4;port=3306;password=root";
-                    MySqlConnection myDbConn = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
+                    MySqlConnection DataBaseConnect = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
                     try
                     {
-                        myDbConn.Open();
+                        DataBaseConnect.Open();
                         string addinfo = "INSERT INTO user (Name, LastName, UserName, Password, Job) VALUES(@Name, @LastName, @UserName, @Password, @Job);";
-                        MySqlCommand cmd = new MySqlCommand(addinfo, myDbConn);
+                        MySqlCommand cmd = new MySqlCommand(addinfo, DataBaseConnect);
 
                         cmd.Parameters.AddWithValue("@Name", NAME);
                         cmd.Parameters.AddWithValue("@LastName", LASTNAME);
@@ -79,7 +72,7 @@ namespace Bovelo
                     }
                     finally
                     {
-                        myDbConn.Close();
+                        DataBaseConnect.Close();
 
                     }
                 }

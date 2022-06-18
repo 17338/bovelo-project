@@ -12,8 +12,7 @@ using MySql.Data.MySqlClient;
 namespace Bovelo
 {
     public partial class UserSetting : Form
-    {
-        
+    {       
 
         public UserSetting()
         {
