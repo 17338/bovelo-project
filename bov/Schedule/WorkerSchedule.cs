@@ -101,7 +101,7 @@ namespace bov.Schedule
             }
 
             DataGridViewCheckBoxColumn dgvCmba = new DataGridViewCheckBoxColumn();
-            dgvCmba.Name = "ckeck";
+            dgvCmba.Name = "Done";
             dataGridView1.Columns.Add(dgvCmba);
 
 
