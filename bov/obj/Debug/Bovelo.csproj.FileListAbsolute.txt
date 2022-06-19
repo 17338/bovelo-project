@@ -519,7 +519,6 @@ C:\Users\edoua\source\repos\17338\bovelo-project\bov\obj\Debug\bov.Cart.resource
 C:\Users\edoua\source\repos\17338\bovelo-project\bov\obj\Debug\bov.TheCatalog.resources
 C:\Users\edoua\source\repos\17338\bovelo-project\bov\obj\Debug\bov.Sale.IncompleteSelection.resources
 C:\Users\edoua\source\repos\17338\bovelo-project\bov\obj\Debug\bov.MissingCustomerMsg.resources
-C:\Users\edoua\source\repos\17338\bovelo-project\bov\obj\Debug\bov.Description.resources
 C:\Users\edoua\source\repos\17338\bovelo-project\bov\obj\Debug\Bovelo.EditUser.resources
 C:\Users\edoua\source\repos\17338\bovelo-project\bov\obj\Debug\Bovelo.FirstUse.resources
 C:\Users\edoua\source\repos\17338\bovelo-project\bov\obj\Debug\Bovelo.Login.resources

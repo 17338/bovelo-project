@@ -158,12 +158,6 @@
     <Compile Include="Classes\Database.cs" />
     <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\OrderLine.cs" />
-    <Compile Include="Sale\Description.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sale\Description.Designer.cs">
-      <DependentUpon>Description.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\EditUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sale\MissingCustomerMsg.resx">
       <DependentUpon>MissingCustomerMsg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sale\Description.resx">
-      <DependentUpon>Description.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\EditUser.resx">
       <DependentUpon>EditUser.cs</DependentUpon>

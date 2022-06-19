@@ -47,15 +47,22 @@ namespace bov
             name2.Text = bike2.name;
             name3.Text = bike3.name;
 
+
             price1.Text = bike1.price.ToString();
             price2.Text = bike2.price.ToString();
             price3.Text = bike3.price.ToString();
-           
-            //pictureBox1.Image = Image.FromFile(path + bike1.image);
-           // pictureBox2.Image = Image.FromFile(path + bike2.image);
-           // pictureBox3.Image = Image.FromFile(path + bike3.image);
 
-            
+            //pictureBox1.Image = Image.FromFile(path + bike1.image);
+            // pictureBox2.Image = Image.FromFile(path + bike2.image);
+            // pictureBox3.Image = Image.FromFile(path + bike3.image);
+
+
+
+            toolTip1.SetToolTip(pictureBox1, bike1.description);
+            toolTip1.SetToolTip(pictureBox2, bike2.description);
+            toolTip1.SetToolTip(pictureBox3, bike3.description);
+
+
             foreach (string color in catalogShop.Colors())
             {
                 color_choice1.Items.Add(color);
@@ -183,32 +190,24 @@ namespace bov
 
             }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Description frm3 = new Description(bike1, this);
-            frm3.Show();
-        }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Description frm3 = new Description(bike2, this);
-            frm3.Show();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Description frm3 = new Description(bike3, this);
-            frm3.Show();
-        }
 
         private void BackToTheMainMenuBtn_Click(object sender, EventArgs e)
         {
             this.Close();
             MainMenu mainmenu = new MainMenu();
             mainmenu.Show();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            
+        }
+        private void toolTip1_Draw(object sender, PopupEventArgs e)
+        {
+            Font f = new Font("Comic Sans MS ", 15.0f);
+
+
         }
     }
 
