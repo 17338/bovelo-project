@@ -120,6 +120,11 @@ namespace bov.Stock
             }
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Bovelo.MainMenu mainmenu = new Bovelo.MainMenu();
+            mainmenu.Show();
+        }
     }
 }

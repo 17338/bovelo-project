@@ -67,9 +67,9 @@ namespace bov.Stock
 
         private void button3_Click(object sender, EventArgs e)//back to the main menu
         {
-            //MainMenu mainMenu = new MainMenu();
-            //this.Hide();
-            //mainMenu.Show();
+            this.Close();
+            Bovelo.MainMenu mainmenu = new Bovelo.MainMenu();
+            mainmenu.Show();
         }
     }
 }

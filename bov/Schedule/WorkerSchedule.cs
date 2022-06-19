@@ -142,5 +142,12 @@ namespace bov.Schedule
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Bovelo.MainMenu mainmenu = new Bovelo.MainMenu();
+            mainmenu.Show();
+        }
     }
 }

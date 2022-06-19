@@ -1,4 +1,5 @@
-﻿using bov.classes;
+﻿
+using bov.classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -106,11 +107,7 @@ namespace bov.Schedule
                      database.getfromdbbyquery("SELECT id FROM bovelo.user WHERE UserName = '" + row.Cells[5].Value + "';")[0][0] + "', '" +
                      dateTimePicker1.Value.ToString("yyyy-M-dd") + "'); ";
                     database.sendToDB(adddb);
-                }
-                
-
-
-                
+                } 
             }
             else
             {
@@ -120,8 +117,9 @@ namespace bov.Schedule
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MainMenu mainMenu = new MainMenu();
-            this.Hide();
+            this.Close();
+            Bovelo.MainMenu mainmenu = new Bovelo.MainMenu();
+            mainmenu.Show();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

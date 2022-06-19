@@ -39,20 +39,22 @@ namespace bov.Stock
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(382, 134);
+            this.dataGridView1.Location = new System.Drawing.Point(340, 107);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(911, 406);
+            this.dataGridView1.Size = new System.Drawing.Size(810, 325);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseDoubleClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(382, 61);
+            this.button1.Location = new System.Drawing.Point(340, 49);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 53);
+            this.button1.Size = new System.Drawing.Size(138, 42);
             this.button1.TabIndex = 1;
             this.button1.Text = "Show parts to order";
             this.button1.UseVisualStyleBackColor = true;
@@ -61,17 +63,18 @@ namespace bov.Stock
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 149);
+            this.label1.Location = new System.Drawing.Point(11, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 20);
+            this.label1.Size = new System.Drawing.Size(295, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Double click to change the status of the order\r\n";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(16, 484);
+            this.button3.Location = new System.Drawing.Point(3, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(179, 44);
+            this.button3.Size = new System.Drawing.Size(159, 35);
             this.button3.TabIndex = 4;
             this.button3.Text = "Back ";
             this.button3.UseVisualStyleBackColor = true;
@@ -79,13 +82,14 @@ namespace bov.Stock
             // 
             // OrderParts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1422, 540);
+            this.ClientSize = new System.Drawing.Size(1264, 432);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OrderParts";
             this.Text = "OrderParts";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
