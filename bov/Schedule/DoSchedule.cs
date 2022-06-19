@@ -107,7 +107,7 @@ namespace bov.Schedule
                      dateTimePicker1.Value.ToString("yyyy-M-dd") + "'); ";
                     database.sendToDB(adddb);
                 }
-                this.Close();
+                
 
 
                 // If 'Yes', do something here.
