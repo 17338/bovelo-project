@@ -110,11 +110,11 @@ namespace bov.Schedule
                 
 
 
-                // If 'Yes', do something here.
+                
             }
             else
             {
-                // If 'No', do something here.
+                
             }
         }
 

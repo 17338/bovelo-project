@@ -75,16 +75,7 @@ namespace bov.Schedule
             List<List<string>> bikes = database.getfromdbbyquery("Select bike_id from schedule inner join bovelo.user as u on user_id = u.id  where u.UserName= '" + comboBox1.SelectedItem + "' AND week LIKE '" + dateTimePicker1.Text + "';");
 
 
-            //MySqlConnection myDbConn = new MySqlConnection(@"server=pat.infolab.ecam.be;port=63334;userid=Bovelo;pwd=Bovelo;persistsecurityinfo=True;database=bovelo");
-            //string selectinfo = "Select bike_id from schedule inner join bovelo.user as u on user_id = u.id  where u.UserName= '" + comboBox1.SelectedItem + "' AND week LIKE '" + dateTimePicker1.Text + "';";
 
-            //myDbConn.Open();
-            //MySqlCommand cmd = new MySqlCommand(selectinfo, myDbConn);
-            //cmd.CommandType = CommandType.Text;
-            //MySqlDataAdapter sda = new MySqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //sda.Fill(dt);
-            //dataGridView1.DataSource = dt;
             dataGridView1.ColumnCount = 2;
             dataGridView1.Columns[0].Name = "bikeid";
             dataGridView1.Columns[1].Name = "model";
@@ -113,7 +104,7 @@ namespace bov.Schedule
 
 
 
-            //myDbConn.Close();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
