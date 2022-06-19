@@ -64,7 +64,7 @@ namespace bov.Stock
 
         void Clear()
         {
-            IDInput.Text=NameInput.Text = QuantityInput.Text = LocationInput.Text = ColorInput.Text = SizeInput.Text = "";
+            NameInput.Text = QuantityInput.Text = LocationInput.Text = ColorInput.Text = SizeInput.Text = "";
             idpart = 0;
             SaveBtn.Text = "Save";
             DeleteBtn.Enabled = false;
@@ -125,6 +125,21 @@ namespace bov.Stock
             this.Close();
             Bovelo.MainMenu mainmenu = new Bovelo.MainMenu();
             mainmenu.Show();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
