@@ -61,5 +61,7 @@ namespace Bovelo
             this.Hide();
             userSetting.Show();
         }
+
+  
     }
 }
