@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace bov
 {
     public partial class Cart : Form
@@ -48,18 +49,39 @@ namespace bov
 
         }
 
-        
+
+        private void dataGridView1_CellMouseUp(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                dataGridView1.Rows[e.RowIndex].Selected = true;
+                rowIndex = e.RowIndex;
+                dataGridView1.CurrentCell = dataGridView1.Rows[rowIndex].Cells[1];
+                this.contextMenuStrip1.Show(dataGridView1, e.Location);
+                contextMenuStrip1.Show(Cursor.Position);
+
+            }
+        }
+
+
+
 
         private void contextMenuStrip1_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.RemoveAt(this.rowIndex);
-            order.DeleteOrderLine(this.rowIndex);
-            dataGridView1.Rows.Clear();
+            if (!this.dataGridView1.Rows[this.rowIndex].IsNewRow)
+            {
+                this.dataGridView1.Rows.RemoveAt(this.rowIndex);
+                order.DeleteOrderLine(this.rowIndex);
+                dataGridView1.Rows.Clear();
+            }
+
+
             foreach (OrderLine orderline in order.orderLines)
             {
                 string[] row = new string[] { orderline.bikeModel.name.ToString(), orderline.size.ToString(), orderline.color.ToString(), orderline.quantity.ToString() };
                 dataGridView1.Rows.Add(row);
             }
+
 
             if (dataGridView1.Rows.Count > 1)
             {
@@ -78,6 +100,9 @@ namespace bov
                 EstimativeDeliveryDateDisplay.Text = "/";
             }
         }
+
+
+
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
