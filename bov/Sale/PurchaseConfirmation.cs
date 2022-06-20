@@ -35,5 +35,10 @@ namespace bov
             TheCatalog new_catalog = new TheCatalog();
             new_catalog.Show();
         }
+
+        private void PurchaseConfirmation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

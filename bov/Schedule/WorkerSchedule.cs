@@ -149,5 +149,10 @@ namespace bov.Schedule
             Bovelo.MainMenu mainmenu = new Bovelo.MainMenu();
             mainmenu.Show();
         }
+
+        private void WorkerSchedule_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

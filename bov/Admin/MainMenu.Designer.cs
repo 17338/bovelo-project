@@ -133,7 +133,7 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Stock.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Stock.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Stock.Location = new System.Drawing.Point(622, 406);
+            this.Stock.Location = new System.Drawing.Point(587, 518);
             this.Stock.Name = "Stock";
             this.Stock.Size = new System.Drawing.Size(223, 42);
             this.Stock.TabIndex = 43;
@@ -147,7 +147,7 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UserSettings.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserSettings.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.UserSettings.Location = new System.Drawing.Point(568, 448);
+            this.UserSettings.Location = new System.Drawing.Point(546, 582);
             this.UserSettings.Name = "UserSettings";
             this.UserSettings.Size = new System.Drawing.Size(324, 40);
             this.UserSettings.TabIndex = 41;
@@ -161,7 +161,7 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(541, 364);
+            this.label1.Location = new System.Drawing.Point(513, 445);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(381, 42);
             this.label1.TabIndex = 45;
@@ -175,9 +175,9 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(578, 331);
+            this.label2.Location = new System.Drawing.Point(567, 365);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(302, 42);
+            this.label2.Size = new System.Drawing.Size(277, 42);
             this.label2.TabIndex = 44;
             this.label2.Text = "PLANNING WORKER";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -189,9 +189,9 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Planning.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Planning.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Planning.Location = new System.Drawing.Point(541, 289);
+            this.Planning.Location = new System.Drawing.Point(557, 291);
             this.Planning.Name = "Planning";
-            this.Planning.Size = new System.Drawing.Size(398, 42);
+            this.Planning.Size = new System.Drawing.Size(300, 42);
             this.Planning.TabIndex = 42;
             this.Planning.Text = "PLANNING MANAGER";
             this.Planning.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -203,7 +203,7 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Catalog.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Catalog.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Catalog.Location = new System.Drawing.Point(599, 247);
+            this.Catalog.Location = new System.Drawing.Point(587, 225);
             this.Catalog.Name = "Catalog";
             this.Catalog.Size = new System.Drawing.Size(270, 42);
             this.Catalog.TabIndex = 40;

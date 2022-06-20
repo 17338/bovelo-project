@@ -31,7 +31,6 @@ namespace bov
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseConfirmation));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.BackToTheCatalogBtn = new bov.classes.RoundButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@ namespace bov
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BackToTheCatalogBtn = new bov.classes.RoundButton();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,27 +54,6 @@ namespace bov
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1361, 78);
             this.panel2.TabIndex = 4;
-            // 
-            // BackToTheCatalogBtn
-            // 
-            this.BackToTheCatalogBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
-            this.BackToTheCatalogBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
-            this.BackToTheCatalogBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.BackToTheCatalogBtn.BorderRadius = 20;
-            this.BackToTheCatalogBtn.BorderSize = 0;
-            this.BackToTheCatalogBtn.FlatAppearance.BorderSize = 0;
-            this.BackToTheCatalogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackToTheCatalogBtn.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackToTheCatalogBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BackToTheCatalogBtn.Location = new System.Drawing.Point(11, 4);
-            this.BackToTheCatalogBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BackToTheCatalogBtn.Name = "BackToTheCatalogBtn";
-            this.BackToTheCatalogBtn.Size = new System.Drawing.Size(140, 65);
-            this.BackToTheCatalogBtn.TabIndex = 20;
-            this.BackToTheCatalogBtn.Text = "Back to the catalog";
-            this.BackToTheCatalogBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.BackToTheCatalogBtn.UseVisualStyleBackColor = false;
-            this.BackToTheCatalogBtn.Click += new System.EventHandler(this.BackToTheCatalogBtn_Click);
             // 
             // label1
             // 
@@ -161,6 +140,27 @@ namespace bov
             this.panel1.Size = new System.Drawing.Size(298, 186);
             this.panel1.TabIndex = 20;
             // 
+            // BackToTheCatalogBtn
+            // 
+            this.BackToTheCatalogBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BackToTheCatalogBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(52)))), ((int)(((byte)(61)))));
+            this.BackToTheCatalogBtn.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BackToTheCatalogBtn.BorderRadius = 20;
+            this.BackToTheCatalogBtn.BorderSize = 0;
+            this.BackToTheCatalogBtn.FlatAppearance.BorderSize = 0;
+            this.BackToTheCatalogBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackToTheCatalogBtn.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackToTheCatalogBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackToTheCatalogBtn.Location = new System.Drawing.Point(11, 4);
+            this.BackToTheCatalogBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BackToTheCatalogBtn.Name = "BackToTheCatalogBtn";
+            this.BackToTheCatalogBtn.Size = new System.Drawing.Size(140, 65);
+            this.BackToTheCatalogBtn.TabIndex = 20;
+            this.BackToTheCatalogBtn.Text = "Back to the catalog";
+            this.BackToTheCatalogBtn.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackToTheCatalogBtn.UseVisualStyleBackColor = false;
+            this.BackToTheCatalogBtn.Click += new System.EventHandler(this.BackToTheCatalogBtn_Click);
+            // 
             // PurchaseConfirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -177,6 +177,7 @@ namespace bov
             this.Name = "PurchaseConfirmation";
             this.Text = "PurchaseConfirmation";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.PurchaseConfirmation_Load);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 

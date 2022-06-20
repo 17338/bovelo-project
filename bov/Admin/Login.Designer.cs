@@ -47,9 +47,10 @@ namespace Bovelo
             // 
             this.PasswordInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PasswordInput.Location = new System.Drawing.Point(679, 521);
+            this.PasswordInput.Location = new System.Drawing.Point(604, 417);
+            this.PasswordInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PasswordInput.Name = "PasswordInput";
-            this.PasswordInput.Size = new System.Drawing.Size(106, 26);
+            this.PasswordInput.Size = new System.Drawing.Size(95, 22);
             this.PasswordInput.TabIndex = 28;
             this.PasswordInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -57,9 +58,10 @@ namespace Bovelo
             // 
             this.UsernameInput.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UsernameInput.Location = new System.Drawing.Point(679, 432);
+            this.UsernameInput.Location = new System.Drawing.Point(604, 346);
+            this.UsernameInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UsernameInput.Name = "UsernameInput";
-            this.UsernameInput.Size = new System.Drawing.Size(106, 26);
+            this.UsernameInput.Size = new System.Drawing.Size(95, 22);
             this.UsernameInput.TabIndex = 27;
             this.UsernameInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -69,9 +71,9 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Password.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Password.Location = new System.Drawing.Point(657, 478);
+            this.Password.Location = new System.Drawing.Point(584, 382);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(145, 27);
+            this.Password.Size = new System.Drawing.Size(129, 22);
             this.Password.TabIndex = 26;
             this.Password.Text = "Password";
             this.Password.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -82,9 +84,9 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Username.Font = new System.Drawing.Font("Comic Sans MS", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Username.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.Username.Location = new System.Drawing.Point(665, 389);
+            this.Username.Location = new System.Drawing.Point(591, 311);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(132, 31);
+            this.Username.Size = new System.Drawing.Size(117, 25);
             this.Username.TabIndex = 25;
             this.Username.Text = "Username";
             this.Username.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -94,9 +96,9 @@ namespace Bovelo
             this.LogInMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LogInMessage.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogInMessage.Location = new System.Drawing.Point(665, 330);
+            this.LogInMessage.Location = new System.Drawing.Point(591, 264);
             this.LogInMessage.Name = "LogInMessage";
-            this.LogInMessage.Size = new System.Drawing.Size(137, 39);
+            this.LogInMessage.Size = new System.Drawing.Size(122, 31);
             this.LogInMessage.TabIndex = 24;
             this.LogInMessage.Text = "Log in :";
             this.LogInMessage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -106,9 +108,9 @@ namespace Bovelo
             this.WelcomeMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.WelcomeMessage.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WelcomeMessage.Location = new System.Drawing.Point(449, 233);
+            this.WelcomeMessage.Location = new System.Drawing.Point(399, 186);
             this.WelcomeMessage.Name = "WelcomeMessage";
-            this.WelcomeMessage.Size = new System.Drawing.Size(553, 70);
+            this.WelcomeMessage.Size = new System.Drawing.Size(492, 56);
             this.WelcomeMessage.TabIndex = 23;
             this.WelcomeMessage.Text = "Welcome to Bovelo";
             this.WelcomeMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,9 +120,9 @@ namespace Bovelo
             this.ConnectionPage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ConnectionPage.Font = new System.Drawing.Font("Comic Sans MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConnectionPage.ForeColor = System.Drawing.Color.White;
-            this.ConnectionPage.Location = new System.Drawing.Point(564, 19);
+            this.ConnectionPage.Location = new System.Drawing.Point(501, 15);
             this.ConnectionPage.Name = "ConnectionPage";
-            this.ConnectionPage.Size = new System.Drawing.Size(311, 53);
+            this.ConnectionPage.Size = new System.Drawing.Size(276, 42);
             this.ConnectionPage.TabIndex = 14;
             this.ConnectionPage.Text = "Connection page";
             this.ConnectionPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,9 +133,10 @@ namespace Bovelo
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(24, 43);
+            this.panel2.Location = new System.Drawing.Point(21, 34);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1435, 10);
+            this.panel2.Size = new System.Drawing.Size(1276, 8);
             this.panel2.TabIndex = 16;
             // 
             // panel1
@@ -143,17 +146,19 @@ namespace Bovelo
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1482, 95);
+            this.panel1.Size = new System.Drawing.Size(1317, 76);
             this.panel1.TabIndex = 29;
             // 
             // BoveloLogoPanel
             // 
             this.BoveloLogoPanel.BackgroundImage = global::bov.Properties.Resources.bovelo_logo;
             this.BoveloLogoPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BoveloLogoPanel.Location = new System.Drawing.Point(54, 135);
+            this.BoveloLogoPanel.Location = new System.Drawing.Point(48, 108);
+            this.BoveloLogoPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BoveloLogoPanel.Name = "BoveloLogoPanel";
-            this.BoveloLogoPanel.Size = new System.Drawing.Size(267, 168);
+            this.BoveloLogoPanel.Size = new System.Drawing.Size(237, 134);
             this.BoveloLogoPanel.TabIndex = 30;
             // 
             // SignInButton
@@ -163,9 +168,10 @@ namespace Bovelo
             this.SignInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignInButton.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold);
             this.SignInButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.SignInButton.Location = new System.Drawing.Point(1232, 627);
+            this.SignInButton.Location = new System.Drawing.Point(1095, 502);
+            this.SignInButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SignInButton.Name = "SignInButton";
-            this.SignInButton.Size = new System.Drawing.Size(159, 74);
+            this.SignInButton.Size = new System.Drawing.Size(141, 59);
             this.SignInButton.TabIndex = 31;
             this.SignInButton.Text = "SIGN IN";
             this.SignInButton.UseVisualStyleBackColor = false;
@@ -173,10 +179,10 @@ namespace Bovelo
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1482, 741);
+            this.ClientSize = new System.Drawing.Size(1317, 593);
             this.Controls.Add(this.SignInButton);
             this.Controls.Add(this.BoveloLogoPanel);
             this.Controls.Add(this.panel1);
@@ -191,6 +197,7 @@ namespace Bovelo
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

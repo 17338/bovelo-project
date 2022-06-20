@@ -44,5 +44,10 @@ namespace Bovelo
                 loginError.Show();
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
